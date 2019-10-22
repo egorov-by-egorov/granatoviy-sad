@@ -201,4 +201,5 @@ $urls = array_diff( $urls, array( $emoji_svg_url ) );
 return $urls;
 }
 
+
 /*End emojies*/
