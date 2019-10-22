@@ -30,8 +30,8 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-	<div class="container-custom">
 
+	<div class="container-custom">
 	<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
@@ -41,7 +41,24 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
+        <header class="entry-header">
+            <?php
+            if ( is_singular() ) :
+                the_title( '<h1 class="entry-title">', '</h1>' );
+            else :
+                the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+            endif;
 
+            if ( 'post' === get_post_type() ) :
+                ?>
+                <div class="entry-meta">
+			<?php
+				pomegranate_garden_theme_posted_on();
+				pomegranate_garden_theme_posted_by();
+			?>
+		</div><!-- .entry-meta -->
+            <?php endif; ?>
+        </header><!-- .entry-header -->
 	<div class="summary entry-summary">
 	
 		<?php
@@ -57,22 +74,25 @@ if ( post_password_required() ) {
 			 * @hooked woocommerce_template_single_sharing - 50
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
+
 			do_action( 'woocommerce_single_product_summary' );
+
+            /**
+             * Hook: woocommerce_after_single_product_summary.
+             *
+             * @hooked woocommerce_output_product_data_tabs - 10
+             * @hooked woocommerce_upsell_display - 15
+             * @hooked woocommerce_output_related_products - 20
+             */
+            do_action( 'woocommerce_after_single_product_summary' );
 		?>
 	</div>
 
 	<?php
-		/**
-		 * Hook: woocommerce_after_single_product_summary.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+
 	?>
 </div>
-</div>
+    <?php do_action( 'custom_output_related_products' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

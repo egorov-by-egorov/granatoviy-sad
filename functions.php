@@ -203,3 +203,14 @@ return $urls;
 
 
 /*End emojies*/
+
+/* remove unuse function in hooks in to card products */
+add_action('woocommerce_after_single_product_summary', 'product_page_description');
+function product_page_description() {
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+}
+
+add_action('custom_output_related_products', 'add_output_related_products');
+function add_output_related_products() {
+    add_action( 'custom_output_related_products', 'woocommerce_output_related_products', 20 );
+}
