@@ -92,6 +92,7 @@ if ( post_password_required() ) {
 
 	?>
 </div>
+    <!-- functions.php   -->
     <?php do_action( 'custom_output_related_products' ); ?>
 </div>
 

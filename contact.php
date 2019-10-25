@@ -4,7 +4,7 @@ Template Name: Контакты
 */
 ?>
 <?php get_header() ?>
-            <section class="main__section banket">
+    <section class="main__section banket">
                 <div class="container-fluid banket__header">
                     <div class="container">
                         <h2 class="banket__header-title">Контакты</h2>
