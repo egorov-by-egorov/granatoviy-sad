@@ -9,10 +9,13 @@
 	
 	<!-- Hero -->
 	
+	<?php  if (!wp_is_mobile() ): ?>
+	
     <section id="hero" class="hero">
         <?php echo do_shortcode('[rev_slider alias="gallery_slider"]'); ?>
 	</section>
 	
+	<?php endif; ?>
 	
 	<!-- About -->
 	
