@@ -8,10 +8,17 @@
 	/*Remove woocommerce default css*/
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 	
+	
+	/*Remove wordpress block_layout css*/
+	function wpassist_remove_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+	} 
+	add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+	
     // Подключение стилей
     function my_styles() {
-    	 wp_enqueue_style( 'plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
-        wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+    	 wp_enqueue_style( 'plugins', get_template_directory_uri() . '/assets/css/plugins.css' ); 
+		 wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 	}
 	
     // Подключение скриптов
