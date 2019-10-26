@@ -155,7 +155,7 @@ textarea {
 .main__title {
     font-size: 36px;
     text-align: center;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Roboto', serif;
 }
 
 .main__title--about {
@@ -641,7 +641,7 @@ textarea {
 }
 
 .hero__slider-text b {
-    font-family: 'Yeseva One', cursive;
+    font-family: Roboto,serif;
 }
 
 /* Slider-dots */
@@ -812,7 +812,7 @@ div.about__menu-gallery {
     font-size: 27px;
     /*color: #e5dacf;*/
     color: #fff;
-    font-family: 'Yeseva One', cursive;
+    font-family: Roboto,serif;
     /*background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
     background: -webkit-linear-gradient(bottom, #000, transparent);
     background: -o-linear-gradient(bottom, #000, transparent);
@@ -876,7 +876,7 @@ div.about__menu-gallery {
     font-size: 36px;
     color: #e5dacf;
     margin-right: 40px;
-    font-family: 'Yeseva One', cursive;
+    font-family: Roboto,serif;
 }
 
 /* End About */
@@ -1059,7 +1059,7 @@ div.about__menu-gallery {
     font-size: 27px;
     margin-bottom: 25px;
     width: 100%;
-    font-family: 'Yeseva One', cursive;
+    font-family: Roboto,serif;
 }
 
 .contact__address-list {
@@ -1091,7 +1091,7 @@ div.about__menu-gallery {
 /*.contact__payment-title {
     margin-bottom: 20px;
     font-size: 21px;
-    font-family: 'Yeseva One', cursive;
+    font-family: Roboto,serif;
 }*/
 
 .contact__payment-list {
@@ -1312,7 +1312,7 @@ padding: 30px 3%*/
     bottom: 10%;
     font-size: 42px;
     color: #e5dacf;
-    font-family: serif;
+    font-family: Roboto, serif;
     font-weight: 600;
 
 }
@@ -1398,6 +1398,15 @@ div.status-publish h1{text-align:center;font-size:30px}
 .wc-ajx-modal-active {
     overflow-y: visible!important;
 }
+
+@font-face { font-family: "rub-arial-regular"; src: url("https://granatoviy-sad.ru/wp-content/plugins/saphali-woocommerce-lite/ruble-simb.woff"), url("https://granatoviy-sad.ru/wp-content/plugins/saphali-woocommerce-lite/ruble-simb.ttf");
+	}
+span.rur {
+			font-family: rub-arial-regular;
+			text-transform: uppercase;
+		}
+span.rur span { display: none; }
+
 #menu-woo-sidebar {
     /*    display: flex;
         overflow-x: scroll;
