@@ -2826,10 +2826,10 @@ div.go-gallery.size-tiny ul.go-gallery-list li.go-gallery-item {
     padding: 15px 15px 15px 25px;
 }
 
-#post-41 ul#menu-woo-sidebar {
+#post-41 ul#menu-woo-sidebar, #post-41 .dgwt-wcas-search-wrapp  {
     display: none;
 }
-#post-43 ul#menu-woo-sidebar {
+#post-43 ul#menu-woo-sidebar, #post-43 .dgwt-wcas-search-wrapp {
     display: none;
 }
 #post-43 .shop__main-category {
