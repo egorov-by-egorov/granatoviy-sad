@@ -1,11 +1,17 @@
 <?php
 	
+	
+	
     add_action( 'wp_enqueue_scripts', 'my_styles' );
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
 	
+	/*Remove woocommerce default css*/
+	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+	
+	
     // Подключение стилей
     function my_styles() {
-        wp_enqueue_style( 'plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
+    	 wp_enqueue_style( 'plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
         wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 	}
 	
