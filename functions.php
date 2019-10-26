@@ -1,7 +1,6 @@
 <?php
 		
-    add_action( 'wp_enqueue_scripts', 'my_styles' );
-    add_action( 'wp_enqueue_scripts', 'my_scripts' );
+   
 	
 	/*Remove woocommerce default css*/
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
@@ -39,6 +38,12 @@
 //		Custom script
         wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/index.js', array('jquery'), null, true  );
 	}
+	
+	
+	add_action( 'wp_enqueue_scripts', 'my_styles' );
+    add_action( 'wp_enqueue_scripts', 'my_scripts' );
+	
+	
     // Добавляем возможность custom logo
     add_theme_support( 'custom-logo' );
 	
