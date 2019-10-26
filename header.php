@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Yeseva+One&amp;
         subset=cyrillic" rel="stylesheet">
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="//leclick.ru/reservation/css/style.css" />
 <script>window.onload=function(){var e,t=document.getElementsByTagName("head")[0];void 0===window.jQuery&&((e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/js/libs/jquery.js",t.appendChild(e));(e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/reservation/js/all.in.one.js",t.appendChild(e)};</script>

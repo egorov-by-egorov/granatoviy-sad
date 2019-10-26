@@ -6,7 +6,7 @@ Template Name: Вакансии
 <?php get_header() ?>
  <section class="main__section banket">
 
- 	<div class="container-fluid banket__header terms-delivery-page__bg">
+ 	<div class="container-fluid banket__header about-page__bg">
  		<div class="container">
  			<h2 class="banket__header-title">Вакансии</h2>
  		</div>
@@ -22,7 +22,7 @@ Template Name: Вакансии
                 За это время вы изучите ресторанный мир, пройдете цикл очного обучения для полного погружения в сферу гостеприимства и наших высочайших стандартов.
                 Кроме новых знаний и навыков, мы обеспечим вас достойным доходом, бесплатным питанием, удобной формой и возможностью развиваться и расти в нашей компании.
             </p>
-            <a class="vacancy__link" href="/vacancy-waiter.php">Подробнее</a>
+            <a class="vacancy__link" href="/vacancy-waiter">Подробнее</a>
         </div>
         <div class="vacancy__box">
             <h2 class="vacancy__title">Бармен</h2>
@@ -33,7 +33,7 @@ Template Name: Вакансии
                 За это время вы изучите ресторанный мир, пройдете цикл очного обучения для полного погружения в сферу гостеприимства и наших высочайших стандартов.
                 Кроме новых знаний и навыков, мы обеспечим вас достойным доходом, бесплатным питанием, удобной формой и возможностью развиваться и расти в нашей компании.
             </p>
-            <a class="vacancy__link" href="/vacancy-barman.php">Подробнее</a>
+            <a class="vacancy__link" href="/vacancy-barman">Подробнее</a>
         </div>
         <div class="vacancy__box">
             <h2 class="vacancy__title">Повар</h2>
@@ -44,7 +44,7 @@ Template Name: Вакансии
                 За это время вы изучите ресторанный мир, пройдете цикл очного обучения для полного погружения в сферу гостеприимства и наших высочайших стандартов.
                 Кроме новых знаний и навыков, мы обеспечим вас достойным доходом, бесплатным питанием, удобной формой и возможностью развиваться и расти в нашей компании.
             </p>
-            <a class="vacancy__link" href="/vacancy-cooker.php">Подробнее</a>
+            <a class="vacancy__link" href="/vacancy-cooker">Подробнее</a>
         </div>
         <div class="vacancy__box">
             <h2 class="vacancy__title">Аниматор</h2>
@@ -55,11 +55,11 @@ Template Name: Вакансии
                 За это время вы изучите ресторанный мир, пройдете цикл очного обучения для полного погружения в сферу гостеприимства и наших высочайших стандартов.
                 Кроме новых знаний и навыков, мы обеспечим вас достойным доходом, бесплатным питанием, удобной формой и возможностью развиваться и расти в нашей компании.
             </p>
-            <a class="vacancy__link" href="/vacancy-animator.php">Подробнее</a>
+            <a class="vacancy__link" href="/vacancy-animator">Подробнее</a>
         </div>
         <div class="vacancy__box">
             <h2 class="vacancy__title">Уборщица-посудомойщица</h2>
-            <a class="vacancy__link" href="/vacancy-cleaning.php">Подробнее</a>
+            <a class="vacancy__link" href="/vacancy-cleaning">Подробнее</a>
         </div>
 
 

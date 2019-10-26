@@ -107,7 +107,12 @@
                                                     <span> (м. Марьино)</span>
                                                 </li>
                                                 <li class="contact__address">
-                                                    <!--					                                        <a href="tel:+74993402552">+7(499) 340-25-52</a>-->
+                                                    <a href="tel:+74993402552">Бронь столов:
+                                                        <div> +7 (499) 340-25-52</div>
+                                                    </a>
+                                                    <a href="tel:+74993400110">Доставка:
+                                                        <div> +7 (499) 340-01-10</div>
+                                                    </a>
                                                 </li>
                                                 <li class="contact__address">
                                                     <a href="mailto:granatoviysad1@bk.ru">Email:

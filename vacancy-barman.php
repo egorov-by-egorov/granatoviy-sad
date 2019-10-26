@@ -6,7 +6,7 @@ Template Name: Вакансия (Бармен)
 <?php get_header() ?>
  <section class="main__section banket">
 
- 	<div class="container-fluid banket__header terms-delivery-page__bg">
+ 	<div class="container-fluid banket__header about-page__bg">
  		<div class="container">
  			<h2 class="banket__header-title">Вакансия Бармен</h2>
  		</div>
