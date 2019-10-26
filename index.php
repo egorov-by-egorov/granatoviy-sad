@@ -1,7 +1,7 @@
 <?php 
 	/*
 		Template Name: Главная-страница
-	*/
+		*/
 ?>
 
 <?php get_header(); ?>
@@ -150,11 +150,7 @@
 			</div>
 		</div>
 	</section>
-	<!--
-	<div class="testi">
-	 <?php echo do_shortcode('[testimonials theme="default_style" paginate="all" count="5" orderby="date" order="ASC" show_title="0" use_excerpt="0" reveal_full_content="0" show_thumbs="0" show_date="1" show_other="1" hide_view_more="1" output_schema_markup="1" show_rating="stars"]'); ?>
-	</div>
-	-->
+	
     <!-- Gallery -->
 	
     <section class="main__section gallery">
