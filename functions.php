@@ -230,3 +230,17 @@ add_action('custom_output_related_products', 'add_output_related_products');
 function add_output_related_products() {
     add_action( 'custom_output_related_products', 'woocommerce_output_related_products', 20 );
 }
+
+
+
+// Remove WP Version From Styles	
+add_filter( 'style_loader_src', 'sdt_remove_ver_css_js', 9999 );
+// Remove WP Version From Scripts
+add_filter( 'script_loader_src', 'sdt_remove_ver_css_js', 9999 );
+
+// Function to remove version numbers
+function sdt_remove_ver_css_js( $src ) {
+	if ( strpos( $src, 'ver=' ) )
+		$src = remove_query_arg( 'ver', $src );
+	return $src;
+}
