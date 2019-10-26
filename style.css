@@ -702,6 +702,8 @@ textarea {
 
 /* About */
 
+.static p {margin-bottom:15px}
+
 .about {
     padding-top: 60px;
 }
