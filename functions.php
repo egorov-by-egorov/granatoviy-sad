@@ -1,7 +1,5 @@
 <?php
-	
-	
-	
+		
     add_action( 'wp_enqueue_scripts', 'my_styles' );
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
 	
@@ -14,6 +12,9 @@
     wp_dequeue_style( 'wp-block-library' );
 	} 
 	add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+	
+	/*Remove wordpress contact form css*/
+	add_filter( 'wpcf7_load_css', '__return_false' );
 	
     // Подключение стилей
     function my_styles() {
