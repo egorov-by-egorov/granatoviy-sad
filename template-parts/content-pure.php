@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container static">
 	<?php
 		the_content();
 		
