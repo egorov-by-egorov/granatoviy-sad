@@ -5,9 +5,7 @@
 	
     // Подключение стилей
     function my_styles() {
-    	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-        wp_enqueue_style( 'datepicker-style', get_template_directory_uri() . '/assets/css/datepicker.min.css' );
-        wp_enqueue_style( 'magnific-style', get_template_directory_uri() . '/assets/css/magnific-popup.css' );
+        wp_enqueue_style( 'plugins', get_template_directory_uri() . '/assets/css/plugins.css' );
         wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 	}
 	
