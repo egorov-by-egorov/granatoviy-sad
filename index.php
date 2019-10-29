@@ -1,7 +1,7 @@
 <?php 
 	/*
 		Template Name: Главная-страница
-		*/
+	*/
 ?>
 
 <?php get_header(); ?>
@@ -12,9 +12,44 @@
 	<?php  if (!wp_is_mobile() ): ?>
 	
     <section id="hero" class="hero">
-        <?php echo do_shortcode('[rev_slider alias="gallery_slider"]'); ?>
+		<link rel="stylesheet" href="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/css/swiper.min.css">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" />
+					<div class="container swiper-item">
+						<span>Лучшие блюда русской и кавказской кухни</span>
+						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide2.jpg" />
+					<div class="container swiper-item">
+						<span>Выбирайте из огромного количества блюд</span>
+						<a class="main__btn main__btn--book" href="/shop/">Посмотреть меню</a>
+					</div>
+					</div>
+			</div>
+			<div class="swiper-pagination swiper-pagination-white"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
+			<div class="swiper-button-prev swiper-button-white"></div>
+		</div>
+		<script src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/js/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				spaceBetween: 30,
+				effect: 'fade',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
 	</section>
-	
 	<?php endif; ?>
 	
 	<!-- About -->
@@ -154,7 +189,7 @@
 		</div>
 	</section>
 	
-   
+	
 	
 </main>
 <?php get_footer(); ?>
