@@ -1502,13 +1502,14 @@ span.rur span { display: none; }
 .gscheckbill input::placeholder{color:#505050}
 .gscheckbill textarea::placeholder{color:#505050}
 .gscheckbill p.form-row-name, .gscheckbill p.form-row-tel{width:50% !important;display:inline-block}
-.gscheckbill p.form-row-add{width:66.7% !important;display:inline-grid}
-.gscheckbill p.form-row-buil{width:33.3% !important;display:inline-grid}
+.gscheckbill p.form-row-add{width:66.6% !important;display:inline-block}
+/*.gscheckbill p.form-row-buil{width:33.3% !important;display:inline-grid}*/
 .gscheckbill p.form-row-tel span, .gscheckbill p.form-row-buil span {margin-top:0px}
 .gscheckbill p.form-row-tel span, .gscheckbill p.form-row-sdac span, .gscheckbill p.form-row-kol span{margin-top:22px}
 .gscheckbill h3{display:none}
 
 .gscheckbill p.form-row-pod, .gscheckbill p.form-row-etaj, .gscheckbill p.form-row-kvar{width:33.333%;display:inline-block}
+.gscheckbill p.form-row-etaj, .gscheckbill p.form-row-kvar{width:50%;}
 
 .gscheckbill p.form-row-domo, .gscheckbill p.form-row-sdac, .gscheckbill p.form-row-kol{width:33.333%;display:inline-block}
 
@@ -2806,14 +2807,15 @@ div.go-gallery.size-tiny ul.go-gallery-list li.go-gallery-item {
 
 /* End Phones */
 
-.map {
+.map,
+.delivery_map {
     height: 380px;
 }
 .map-sidebar {
     height: 230px;
 }
 
-.map__contacts-page {
+.map__contacts-page{
     height: 450px;
 }
 

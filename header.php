@@ -11,7 +11,7 @@
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="//leclick.ru/reservation/css/style.css" />
 <script>window.onload=function(){var e,t=document.getElementsByTagName("head")[0];void 0===window.jQuery&&((e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/js/libs/jquery.js",t.appendChild(e));(e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/reservation/js/all.in.one.js",t.appendChild(e)};</script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 	</head>
 	
     <body>

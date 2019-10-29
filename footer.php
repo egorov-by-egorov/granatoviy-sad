@@ -9,9 +9,17 @@
             <div class="row align-items-center m-0">
 
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
-                    <div id="map" class="map">
-
-                    </div>
+                    <?php
+                        if (is_checkout()) {
+                            ?>
+                            <div id="delivery_map" class="delivery_map"></div>
+                            <?php
+                        } else {
+                            ?>
+                            <div id="map" class="map"></div>
+                            <?php
+                        }
+                    ?>
                 </div>
 
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
@@ -187,7 +195,9 @@
 <div class="mobfixedphone"><a href="tel:+74993402552"><i class="fa fa-phone" aria-hidden="true"></i></a></div>
 <a href="#wrapper" class="scrollto scroll__top"></a>
 
-<?php wp_footer(); ?>
+<!-- YANDEX MAP -->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=24149691-1826-4838-ba59-7e142846a30a&lang=ru_RU" type="text/javascript"></script>
+<script>const template_url = '<?= get_bloginfo("template_url"); ?>'</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
   (function (m, e, t, r, i, k, a) {
@@ -210,6 +220,7 @@
     <div><img src="https://mc.yandex.ru/watch/55655203" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+<?php wp_footer(); ?>
 </body>
 
 </html> 

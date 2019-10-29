@@ -1,6 +1,32 @@
 <?php
-		
-   
+
+//     DUMPER отладчик
+function dumper ($obj)
+{
+    echo "<pre>",
+    htmlspecialchars(dumperGet($obj)),
+    "</pre>";
+}
+function dumperGet(&$obj, $leftSp = "")
+{
+    if (is_array($obj)) {
+        $type = "Array[" . count($obj) . "]";
+    } elseif (is_object($obj)) {
+        $type = "Object";
+    } elseif (gettype($obj) == "boolean") {
+        return $obj ? "true" : "false";
+    } else {
+        return "\"$obj\"";
+    }
+    $buf = $type;
+    $leftSp .= "    ";
+    for (Reset($obj); list($k,$v) = each($obj);) {
+        if ($k === "GLOBALS") continue;
+        $buf .= "\n$leftSp$k => ". dumperGet($v, $leftSp);
+    }
+    return $buf;
+}
+
 	
 	/*Remove woocommerce default css*/
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
@@ -35,8 +61,18 @@
         wp_enqueue_script( 'magnific-script', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), null, true  );
 //		Mask-input ("Header -> Форма бронирования стола" use for search (modal)id="modal_book" -> (input)id="form__tel")
     	wp_enqueue_script( 'mask-script', get_template_directory_uri() . '/assets/js/jquery.mask.min.js',  array('jquery'), null, true );
+//		jquery.suggestions (CHECKOUT page (подсказка для поля с адресом))
+    	wp_enqueue_script( 'suggestions-script', get_template_directory_uri() . '/assets/js/jquery.suggestions.min.js',  array('jquery'), null, true );
+        if (is_checkout()) {
+//            Yandex main_map Init
+            wp_enqueue_script( 'delivery_map-script', get_template_directory_uri() . '/assets/js/delivery_map.js', array('jquery'), null, true  );
+        } else {
+//            Yandex delivery_map Init
+            wp_enqueue_script( 'main_map-script', get_template_directory_uri() . '/assets/js/main_map.js', array('jquery'), null, true  );
+        }
 //		Custom script
         wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/index.js', array('jquery'), null, true  );
+
 	}
 	
 	
@@ -165,7 +201,6 @@ function additional_email_recipient( $recipient, $order ) {
     }
     return $recipient;
 }
-
 
 /*Remove emojies*/
 
