@@ -12,6 +12,7 @@
 	<?php  if (!wp_is_mobile() ): ?>
 	
     <section id="hero" class="hero">
+		<link rel="stylesheet" href="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/css/swiper.min.css">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
