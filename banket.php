@@ -1,7 +1,6 @@
 <?php 
 /*
-Template Name: Банкеты/кейтеринг
-*/
+Template Name: Банкеты/кейтеринг*/
 ?>
 <?php get_header() ?>
 <section class="main__section banket">
