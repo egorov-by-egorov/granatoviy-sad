@@ -1,6 +1,7 @@
 <?php
 		
-   
+   //Remove meta generators   
+   remove_action('wp_head', 'wp_generator');
 	
 	/*Remove woocommerce default css*/
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
