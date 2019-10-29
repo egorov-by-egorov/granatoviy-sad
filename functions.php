@@ -158,10 +158,10 @@ add_filter( 'woocommerce_email_recipient_new_order', 'additional_email_recipient
 function additional_email_recipient( $recipient, $order ) {
     if ( ! is_a( $order, 'WC_Order' ) ) return $recipient;
     if( $order->get_shipping_method() == 'Доставка из ресторана в Марьино' ){
-        $recipient .= ',sm.programming@yandex.ru';
+        $recipient .= ',marinoorder@granatoviy-sad.ru';
     }
 	else if ( $order->get_shipping_method() == 'Доставка из ресторана в Соколе' ){
-        $recipient .= ',sm.programming@ya.ru';
+        $recipient .= ',sokolorder@granatoviy-sad.ru';
     }
     return $recipient;
 }
@@ -244,3 +244,9 @@ function sdt_remove_ver_css_js( $src ) {
 		$src = remove_query_arg( 'ver', $src );
 	return $src;
 }
+
+
+// Remove All Yoast HTML Comments
+add_action('wp_head',function() { ob_start(function($o) {
+return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
+}); },~PHP_INT_MAX);
