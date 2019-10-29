@@ -7,13 +7,13 @@
             <p class="line-granat"></p>
             <h3 class="contact__title">Контакты</h3>
             <div class="row align-items-center m-0">
-
+				<?php  if (!wp_is_mobile() ): ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
                     <div id="map" class="map">
 
                     </div>
                 </div>
-
+				<?php endif; ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
                     <div class="contact__box">
                         <div class="container p-0">
