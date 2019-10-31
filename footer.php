@@ -61,10 +61,10 @@
                                              alt="logo">
                                     </a>
                                     <div class="social-images">
-                                        <a target="_blank" href="https://www.facebook.com/granatoviysad/"><img
+                                        <a target="_blank" rel="noopener" href="https://www.facebook.com/granatoviysad/"><img
                                                     src="<?php bloginfo(template_url); ?>/assets/images/facebook-logo.svg"
                                                     alt="icon" class="facebook"></a>
-                                        <a target="_blank"
+                                        <a target="_blank" rel="noopener"
                                            href="https://instagram.com/granatoviysad_n1?igshid=6l43kl3ar3i9"><img
                                                     src="<?php bloginfo(template_url); ?>/assets/images/instagram-logo.svg"
                                                     alt="icon" class="instagram"></a>
@@ -91,8 +91,8 @@
                                                     </a>
                                                 </li>
                                                 <li class="contact__address">
-                                                    <a href="mailto:granatoviysad1@bk.ru">Email:
-                                                        <div>granatoviysad1@bk.ru</div>
+                                                    <a href="mailto:info@granatoviy-sad.ru">Email:
+                                                        <div>info@granatoviy-sad.ru</div>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -115,8 +115,8 @@
                                                     </a>
                                                 </li>
                                                 <li class="contact__address">
-                                                    <a href="mailto:granatoviysad1@bk.ru">Email:
-                                                        <div>granatoviysad1@bk.ru</div>
+                                                    <a href="mailto:info@granatoviy-sad.ru">Email:
+                                                        <div>info@granatoviy-sad.ru</div>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -141,7 +141,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
                     <span class="developer__promind">Developed:
-                        <a rel="nofollow" target="_blank" href="https://promind.studio/">
+                        <a rel="noreferrer" target="_blank" href="https://promind.studio/">
                             <img class="developer__promind-img" src="<?php bloginfo(template_url); ?>/assets/images/promind-grey.png" alt="ProMind" title="ProMind">
                             ProMind
                         </a>
