@@ -38,7 +38,7 @@
 									</div>-->
 									
 									<!-- Sidebar btn -->
-									<button class="sidebar-btn" type="button">
+									<button class="sidebar-btn" aria-label="Меню">
 										<span></span>
 									</button>
 									
