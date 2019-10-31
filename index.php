@@ -16,14 +16,14 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" alt="Забронировать стол" />
 					<div class="container swiper-item">
 						<span>Лучшие блюда русской и кавказской кухни</span>
 						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide2.jpg" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide2.jpg" alt="Меню ресторанов" />
 					<div class="container swiper-item">
 						<span>Выбирайте из огромного количества блюд</span>
 						<a class="main__btn main__btn--book" href="/shop/">Посмотреть меню</a>
