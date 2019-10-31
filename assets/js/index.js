@@ -140,110 +140,54 @@ $(document).ready(() => {
       $('#menu-woo-sidebar li .sub-menu').not(toggle).slideUp();
     });
 
-    // Yandex Map
-    ymaps.ready(init);
 
+  // Yandex Map placemarks
     var placemarks = [
-      {
-        latitude: 55.800200,
-        longitude: 37.519081,
-        hintContent: '<div class="map__hint"><p class="line-granat"></p><p>Гранатовый сад №1 "Чапаевский пер. 10/2"</p></div>',
-        balloonContent: [
-          '<div class="map__balloon">',
-          '<p class="line-granat">',
-          '<h3 class="contact__title">Контакты</h3>',
-          "<p>Ресторан Гранатовый сад №1!</p>",
-          "<p>Ждём Вас по адресу: Чапаевский пер. 10/2</p>",
-          "<p>Контакты:</p>",
-          '<p><b>Бронь столов:</b> <a href="tel:+74950323777">+7(495) 032-37-77</a></p>',
-          '<p><b>Доставка еды:</b> <a href="tel:+74997286656">+7(499) 728-66-56</a></p>',
-          '<p><b>Email:</b> <a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a></p>',
-          "</div>"
-        ]
-      },
-      {
-        latitude: 55.644887,
-        longitude: 37.752957,
-        hintContent: '<div class="map__hint"><p class="line-granat"></p>Гранатовый сад №1 "ул.Поречная д. 5/14, стр.1"</div>',
-        balloonContent: [
-          '<div class="map__balloon">',
-          '<p class="line-granat">',
-          '<h3 class="contact__title">Контакты</h3>',
-          "<p>Ресторан Гранатовый сад №1!</p>",
-          "<p>Ждём Вас по адресу: ул.Поречная д. 5/14, стр.1</p>",
-          "<p>Контакты:</p>",
-          '<p><b>Бронь столов:</b> <a href="tel:+74993402552">+7(499) 340-25-52</a></p>',
-          '<p><b>Доставка еды:</b> <a href="tel:+74993400110">+7(499) 340-01-10</a></p>',
-          '<p><b>Караоке NIGHT-CLUB:</b> <a href="tel:+74993472828">+7(499) 347-28-28</a></p>',
-          '<p>Email: <a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a></p>',
-          "</div>"
-        ]
-      }
-    ];
-
-function init() {
-  var location = ymaps.geolocation;
-  var map1 = new ymaps.Map("map", {
-    center: [55.755814, 37.617635],
-    zoom: 10,
-    controls: ["zoomControl"]
+    {
+      latitude: 55.800200,
+      longitude: 37.519081,
+      hintContent: '<div class="map__hint"><p class="line-granat"></p><p>Гранатовый сад №1 "Чапаевский пер. 10/2"</p></div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<p class="line-granat">',
+        '<h3 class="contact__title">Контакты</h3>',
+        "<p>Ресторан Гранатовый сад №1!</p>",
+        "<p>Ждём Вас по адресу: Чапаевский пер. 10/2</p>",
+        "<p>Контакты:</p>",
+        '<p><b>Бронь столов:</b> <a href="tel:+74950323777">+7(495) 032-37-77</a></p>',
+        '<p><b>Доставка еды:</b> <a href="tel:+74997286656">+7(499) 728-66-56</a></p>',
+        '<p><b>Email:</b> <a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a></p>',
+        "</div>"
+      ]
+    },
+    {
+      latitude: 55.644887,
+      longitude: 37.752957,
+      hintContent: '<div class="map__hint"><p class="line-granat"></p>Гранатовый сад №1 "ул.Поречная д. 5/14, стр.1"</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<p class="line-granat">',
+        '<h3 class="contact__title">Контакты</h3>',
+        "<p>Ресторан Гранатовый сад №1!</p>",
+        "<p>Ждём Вас по адресу: ул.Поречная д. 5/14, стр.1</p>",
+        "<p>Контакты:</p>",
+        '<p><b>Бронь столов:</b> <a href="tel:+74993402552">+7(499) 340-25-52</a></p>',
+        '<p><b>Доставка еды:</b> <a href="tel:+74993400110">+7(499) 340-01-10</a></p>',
+        '<p><b>Караоке NIGHT-CLUB:</b> <a href="tel:+74993472828">+7(499) 347-28-28</a></p>',
+        '<p>Email: <a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a></p>',
+        "</div>"
+      ]
+    }
+  ];
+  // DADATA
+  $("#billing_address_1").suggestions({
+    token: "f65601ab45356d54b5fb7592dc6444feaa556d3e",
+    type: "ADDRESS",
+    /* Вызывается, когда пользователь выбирает одну из подсказок */
+    onSelect: function(suggestion) {
+      // suggestion.value;
+    }
   });
-  map1.behaviors.disable('scrollZoom');
-
-  // var map2 = new ymaps.Map("map-sidebar", {
-  //   center: [55.755814, 37.617635],
-  //   zoom: 9,
-  //   controls: ["zoomControl","geolocationControl"],
-  // });
-  // map2.behaviors.disable('scrollZoom');
-
-  placemarks.forEach(function(obj) {
-    var placemark1 = new ymaps.Placemark(
-      [obj.latitude, obj.longitude],
-      {
-        hintContent: obj.hintContent,
-        balloonContent: obj.balloonContent.join("")
-      },
-      {
-        iconLayout: "default#image",
-        iconImageHref: "https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/location.svg",
-        iconImageSize: [46, 46]
-        // iconImageOffset: [-23, -57]
-      }
-    );
-    // var placemark2 = new ymaps.Placemark(
-    //   [obj.latitude, obj.longitude],
-    //   {
-    //     hintContent: obj.hintContent,
-    //     balloonContent: obj.balloonContent.join("")
-    //   },
-    //   {
-    //     iconLayout: "default#image",
-    //     iconImageHref: "https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/location.svg",
-    //     iconImageSize: [46, 46]
-    //     // iconImageOffset: [-23, -57]
-    //   }
-    // );
-    map1.geoObjects.add(placemark1);
-    // map2.geoObjects.add(placemark2);
-  });
-
-  location.get({
-          provider: 'yandex',
-          mapStateAutoApply: false,
-          autoReverseGeocode: false
-      }).then(
-        function(result) {
-
-          var userAddress = result.geoObjects.get(0).properties.get('text');
-          var userCoodinates = result.geoObjects.get(0).geometry.getCoordinates();
-          result.geoObjects.get(0).properties.set({
-              balloonContentHeader: 'Моё местоположение',
-              balloonContentBody: userAddress
-          });
-            map1.geoObjects.add(result.geoObjects);
-        });
-  };
 
 });
 

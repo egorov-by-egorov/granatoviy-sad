@@ -1,0 +1,13 @@
+{"type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "id": 0,
+    "geometry": {
+      "type": "Polygon",
+      "coordinates":[[[55.799887, 37.472954],[55.841263, 37.557820],[55.802931, 37.666267],[55.756605, 37.532614]]]
+    },
+    "options": {"strokeColor": "#FFFFFF", "fillColor": "#FF1F1F70"},
+    "properties": {"name": "м. КУ, Маршала Новикова 1 корпус 3</br>тел: +7(123)456-789</br>Часы работы: с 09-00 до 02-00</br>Служба доставки: +7(123)456-789", "time": "40"}
+  }
+  ]
+}

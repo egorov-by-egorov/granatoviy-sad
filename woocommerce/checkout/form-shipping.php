@@ -31,6 +31,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</h3>
 
 		<div class="shipping_address">
+            <?php function debug($arr) {
+                echo '<pre>' . print_r($arr,1) . '</pre>';
+            }
+            ?>
 
 			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
 

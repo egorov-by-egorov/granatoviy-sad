@@ -19,7 +19,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 /** @global WC_Checkout $checkout */
 
 ?>
@@ -37,7 +36,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
 			$fields = $checkout->get_checkout_fields( 'billing' );
-
 			foreach ( $fields as $key => $field ) {
 				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
 					$field['country'] = $checkout->get_value( $field['country_field'] );
