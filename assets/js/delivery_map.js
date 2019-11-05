@@ -2,10 +2,10 @@
 ymaps.ready(initDeliveryMap);
 
 function initDeliveryMap() {
-  var myMap = new ymaps.Map('delivery_map', {
+  let myMap = new ymaps.Map('delivery_map', {
       center: [55.753774, 37.620147],
       zoom: 10,
-      controls: ['geolocationControl', 'searchControl','trafficControl', 'zoomControl']
+      controls: ['geolocationControl', 'searchControl', 'zoomControl']
     }),
 
     deliveryPoint = new ymaps.GeoObject({
@@ -16,35 +16,90 @@ function initDeliveryMap() {
       draggable: true,
       iconCaptionMaxWidth: '215'
     }),
-    control = myMap.controls.get('trafficControl'),
+    location = ymaps.geolocation,
     searchControl = myMap.controls.get('searchControl');
-  searchControl.options.set({noPlacemark: true, placeholderContent: 'Введите адрес доставки'});
-  myMap.geoObjects.add(deliveryPoint);
-  myMap.behaviors.disable('scrollZoom');
+    searchControl.options.set({noPlacemark: true, placeholderContent: 'Введите адрес доставки'});
+    myMap.geoObjects.add(deliveryPoint);
+    myMap.behaviors.disable('scrollZoom');
 
-  function onZonesLoad(json) {
+  function highlightResult(obj) {
+    // Сохраняем координаты переданного объекта.
+    let coords = obj.geometry.getCoordinates(),
+      // Находим полигон, в который входят переданные координаты.
+      polygon = deliveryZones.searchContaining(coords).get(0);
+    if (polygon) {
+      switch(polygon.properties.get('rest')) {
+        case 'Сокол':
+          console.log('СОКОЛ');
+          $('#shipping_method input').removeAttr('checked', 'checked');
+          $('#shipping_method_0_free_shipping4').attr('checked', 'checked');
+          break;
+        case 'Марьино':
+          console.log('МАРЬИНО');
+          $('#shipping_method input').removeAttr('checked', 'checked');
+          $('#shipping_method_0_flat_rate2').attr('checked', 'checked');
+          break;
+      }
+      // Уменьшаем прозрачность всех полигонов, кроме того, в который входят переданные координаты.
+      deliveryZones.setOptions('fillOpacity', 0.4);
+      polygon.options.set('fillOpacity', 0.8);
+      // Перемещаем метку с подписью в переданные координаты и перекрашиваем её в цвет полигона.
+      deliveryPoint.geometry.setCoordinates(coords);
+      deliveryPoint.options.set('iconColor', polygon.options.get('fillColor'));
+      // Задаем подпись для метки.
+      if (typeof(obj.getThoroughfare) === 'function') {
+        setData(obj);
+      } else {
+        // Если вы не хотите, чтобы при каждом перемещении метки отправлялся запрос к геокодеру,
+        // закомментируйте код ниже.
+        ymaps.geocode(coords, {results: 1}).then(function (res) {
+          let obj = res.geoObjects.get(0);
+          setData(obj);
+        });
+      }
+    } else {
+      console.log('Вне зоны');
+      // Если переданные координаты не попадают в полигон, то задаём стандартную прозрачность полигонов.
+      deliveryZones.setOptions('fillOpacity', 0.4);
+      // Перемещаем метку по переданным координатам.
+      deliveryPoint.geometry.setCoordinates(coords);
+      // Задаём контент балуна и метки.
+      deliveryPoint.properties.set({
+        iconCaption: 'Адрес не обслуживается!',
+        balloonContent: 'Cвяжитесь с оператором',
+        balloonContentHeader: 'Доставка до этого адреса не осуществляется!'
+      });
+      // Перекрашиваем метку в чёрный цвет.
+      deliveryPoint.options.set('iconColor', 'black');
+    }
 
-    // Добавляем зоны на карту.
-    var deliveryZones = ymaps.geoQuery(json).addToMap(myMap);
-    // Добавляем прямое геокодирование (Передаем адрес доставки из поля #billing_address_1)
-    $('#billing_address_1').on('suggestions-set', function() {
-      console.log($(this));
-      // var myGeocoder = ymaps.geocode(billing_address_val);
-    });
+    function setData(obj){
+      let address = [obj.getThoroughfare(), obj.getPremiseNumber(), obj.getPremise()].join(' ');
+      if (address.trim() === '') {
+        address = obj.getAddressLine();
+      }
+      deliveryPoint.properties.set({
+        iconCaption: address,
+        balloonContent: '<b>Адрес ресторана: </b>' + polygon.properties.get('name'),
+        balloonContentHeader: '<b>Время доставки: </b>' + polygon.properties.get('time') + ' мин.'
+      });
+    }
+  }
+  // Добавляем полигоны на карту из файла data.json
+  $.ajax({
+    url: template_url + '/assets/js/data.json',
+    dataType: 'json',
+    success: function (json) {
+      // Добавляем зоны на карту.
+    deliveryZones = ymaps.geoQuery(json).addToMap(myMap);
 
     // Задаём цвет и контент балунов полигонов.
     deliveryZones.each(function (obj) {
-      var color = obj.options.get('fillColor');
-      color = color.substring(0, color.length - 2);
-      obj.options.set({fillColor: color, fillOpacity: 0.4});
+      let color = obj.options.get('fillColor');
+      let stroke = obj.options.get('stroke');
+      obj.options.set({fillColor: color, fillOpacity: 0.4, stroke});
       obj.properties.set('balloonContent', obj.properties.get('name'));
       obj.properties.set('balloonContentHeader', 'Время доставки: ' + obj.properties.get('time') + ' мин.')
-    });
-    // Проверим попадание адреса пользователя в одну из зон доставки.
-    myGeocoder.then(function (res) {
-      highlightResult(res.geoObjects.get(0));
-    }, function (err) {
-      // Обработка ошибки.
     });
 
     // Проверим попадание результата поиска в одну из зон доставки.
@@ -67,62 +122,86 @@ function initDeliveryMap() {
     deliveryPoint.events.add('dragend', function () {
       highlightResult(deliveryPoint);
     });
+    }
+  });
 
-    function highlightResult(obj) {
-      // Сохраняем координаты переданного объекта.
-      var coords = obj.geometry.getCoordinates(),
-        // Находим полигон, в который входят переданные координаты.
-        polygon = deliveryZones.searchContaining(coords).get(0);
-      if (polygon) {
-        // Уменьшаем прозрачность всех полигонов, кроме того, в который входят переданные координаты.
-        deliveryZones.setOptions('fillOpacity', 0.4);
-        polygon.options.set('fillOpacity', 0.8);
-        // Перемещаем метку с подписью в переданные координаты и перекрашиваем её в цвет полигона.
-        deliveryPoint.geometry.setCoordinates(coords);
-        deliveryPoint.options.set('iconColor', polygon.options.get('fillColor'));
-        // Задаем подпись для метки.
-        if (typeof(obj.getThoroughfare) === 'function') {
-          setData(obj);
-        } else {
-          // Если вы не хотите, чтобы при каждом перемещении метки отправлялся запрос к геокодеру,
-          // закомментируйте код ниже.
-          ymaps.geocode(coords, {results: 1}).then(function (res) {
-            var obj = res.geoObjects.get(0);
-            setData(obj);
-          });
+
+  // Подключаем поисковые подсказки к полю ввода.
+  let suggestView = new ymaps.SuggestView('billing_address_1');
+  // Убираем событие submit с клавиши enter для формы checkout
+  $('#removeEnterEvent').keypress(e => {return e.keyCode != 13});
+
+  // Активируем enter для нашего поля с подсказками submit чтобы отрабатывали подсказки при событии change инпута
+  // $('#billing_address_1').on('keyup', e => {
+  //   e.preventDefault();
+  //   if (e.keyCode = 13) {
+  //     $('#billing_address_1').val($('#billing_address_1').val().replace(/ $/g, ''));
+  //   }
+  // });
+
+  // При событии инпута запускаем верификацию введёных данных.
+  $('#billing_address_1').focusout(function (e) {
+    $(this).val($(this).val().replace(/ $/g, ''));
+  });
+  $('#billing_address_1').on('change', function (e) {
+    geocode();
+  });
+
+  function geocode() {
+    // Забираем запрос из поля ввода.
+    let request = $('#billing_address_1').val();
+    // Геокодируем введённые данные.
+    ymaps.geocode(request).then(function (res) {
+      let obj = res.geoObjects.get(0),
+        error, hint;
+
+      if (obj) {
+        // Об оценке точности ответа геокодера можно прочитать тут: https://tech.yandex.ru/maps/doc/geocoder/desc/reference/precision-docpage/
+        switch (obj.properties.get('metaDataProperty.GeocoderMetaData.precision')) {
+          case 'exact':
+            break;
+          case 'number':
+          case 'near':
+          case 'range':
+            error = 'Неточный адрес, уточните номер дома';
+            break;
+          case 'street':
+            error = 'Неполный адрес, укажите номер дома';
+            break;
+          case 'other':
+            error = 'Неполный адрес, укажите улицу и номер дома';
+            break;
+          default:
+            error = 'Неточный адрес, требуется уточнение';
         }
       } else {
-        // Если переданные координаты не попадают в полигон, то задаём стандартную прозрачность полигонов.
-        deliveryZones.setOptions('fillOpacity', 0.4);
-        // Перемещаем метку по переданным координатам.
-        deliveryPoint.geometry.setCoordinates(coords);
-        // Задаём контент балуна и метки.
-        deliveryPoint.properties.set({
-          iconCaption: 'Доставка до этого адреса не осуществляется, будем рады видеть Вас в нашем ресторане!',
-          balloonContent: 'Cвяжитесь с оператором',
-          balloonContentHeader: ''
-        });
-        // Перекрашиваем метку в чёрный цвет.
-        deliveryPoint.options.set('iconColor', 'black');
+        error = 'Адрес не найден';
       }
 
-      function setData(obj){
-        var address = [obj.getThoroughfare(), obj.getPremiseNumber(), obj.getPremise()].join(' ');
-        if (address.trim() === '') {
-          address = obj.getAddressLine();
-        }
-        deliveryPoint.properties.set({
-          iconCaption: address,
-          balloonContent: address,
-          balloonContentHeader: '<b>Время доставки: ' + polygon.properties.get('time') + ' р.</b>'
-        });
+      // Если геокодер возвращает пустой массив или неточный результат, то показываем ошибку.
+      if (error) {
+        showError(error);
+      } else {
+        showResult(obj);
       }
-    }
+    }, function (e) {
+      console.log(e)
+    })
+
+  }
+  function showResult(obj) {
+    // Удаляем сообщение об ошибке, если найденный адрес совпадает с поисковым запросом.
+    $('#billing_address_1').removeClass('input_error');
+    $('.gscheckbill label[for="billing_address_1"]').removeClass('has_error');
+
+    // Проверим попадание метки геолокации в одну из зон доставки.
+    highlightResult(obj);
   }
 
-  $.ajax({
-    url: template_url + '/assets/js/data.json',
-    dataType: 'json',
-    success: onZonesLoad
-  });
+  function showError(message) {
+    let showErrorMessage = $('.gscheckbill label[for="billing_address_1"]');
+    $('#billing_address_1').addClass('input_error');
+    showErrorMessage.addClass('has_error');
+    showErrorMessage.text(message);
+  }
 }

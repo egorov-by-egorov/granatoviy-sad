@@ -108,6 +108,7 @@ $(document).ready(() => {
     // Mask inputs
 
     $('#form__tel').mask('+7 (999) 999-99-99');
+    $('#billing_phone').mask('+7 (999) 999-99-99');
 
     // Magnific
     $('.img-zoom').magnificPopup({
@@ -180,14 +181,13 @@ $(document).ready(() => {
     }
   ];
   // DADATA
-  $("#billing_address_1").suggestions({
-    token: "f65601ab45356d54b5fb7592dc6444feaa556d3e",
-    type: "ADDRESS",
-    /* Вызывается, когда пользователь выбирает одну из подсказок */
-    onSelect: function(suggestion) {
-      // suggestion.value;
-    }
-  });
-
+  // $("#billing_address_1").suggestions({
+  //   token: "f65601ab45356d54b5fb7592dc6444feaa556d3e",
+  //   type: "ADDRESS",
+  //   /* Вызывается, когда пользователь выбирает одну из подсказок */
+  //   onSelect: function(suggestion) {
+  //     // console.log(suggestion.value);
+  //   }
+  // });
 });
 

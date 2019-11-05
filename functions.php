@@ -194,10 +194,10 @@ add_filter( 'woocommerce_email_recipient_new_order', 'additional_email_recipient
 function additional_email_recipient( $recipient, $order ) {
     if ( ! is_a( $order, 'WC_Order' ) ) return $recipient;
     if( $order->get_shipping_method() == 'Доставка из ресторана в Марьино' ){
-        $recipient .= ',sm.programming@yandex.ru';
+        $recipient .= ',marino@granatoviy-sad.ru';
     }
 	else if ( $order->get_shipping_method() == 'Доставка из ресторана в Соколе' ){
-        $recipient .= ',sm.programming@ya.ru';
+        $recipient .= ',sokol@granatoviy-sad.ru';
     }
     return $recipient;
 }
@@ -266,8 +266,6 @@ function add_output_related_products() {
     add_action( 'custom_output_related_products', 'woocommerce_output_related_products', 20 );
 }
 
-
-
 // Remove WP Version From Styles	
 add_filter( 'style_loader_src', 'sdt_remove_ver_css_js', 9999 );
 // Remove WP Version From Scripts
@@ -278,4 +276,12 @@ function sdt_remove_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
 		$src = remove_query_arg( 'ver', $src );
 	return $src;
+}
+// Очистка полей формы на странице checkout
+add_filter( 'woocommerce_checkout_get_value' , 'clear_checkout_fields', 10, 2 );
+function clear_checkout_fields($value, $input) {
+    if( $input != 'billing_first_name' && $input != 'billing_phone' ) {
+        $value = '';
+    }
+    return $value;
 }

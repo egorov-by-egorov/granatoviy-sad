@@ -113,8 +113,8 @@
                         <div class="grid-item">
 							<a href="./product-category/steyki-bbq/">
 								<div class="about__menu-gallery-overlay"></div>
-								<img alt="Стейки" src="<?php bloginfo(template_url); ?>/assets/images/6-bbq.jpg">
-								<h3 class="about__menu-gallery-title">Стейки</h3>
+								<img alt="Шашлыки" src="<?php bloginfo(template_url); ?>/assets/images/shashlyk.jpg">
+								<h3 class="about__menu-gallery-title">Шашлыки</h3>
 							</a>
 						</div>
                         <div class="grid-item">

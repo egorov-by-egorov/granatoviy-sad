@@ -3471,4 +3471,34 @@ button.swiper-pagination-bullet {
 
 }
 
+/*.input_error, .input_error:focus {*/
+/*    outline: none;*/
+/*    border: 1px solid #f33;*/
+/*    box-shadow: 0 0 1px 1px #f33;*/
+/*}*/
+
+/*#notice {*/
+/*    position: absolute;*/
+/*    left: 22px;*/
+/*    margin: 0px;*/
+/*    top: 44px;*/
+/*    color: #f33;*/
+/*    display: none;*/
+/*}*/
+
+.input_error, .input_error:focus {
+    outline: none;
+    border: 1px solid #f33;
+    box-shadow: 0 0 1px 1px #f33;
+}
+#billing_address_1_field {
+    position: relative;
+}
+.gscheckbill label.has_error {
+    display: block!important;
+    color: #f33;
+}
+
+
+
 /*//////////////////////
