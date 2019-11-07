@@ -128,30 +128,18 @@ function initDeliveryMap() {
 
   // Подключаем поисковые подсказки к полю ввода.
   let suggestView = new ymaps.SuggestView('billing_address_1');
+
   // Убираем событие submit с клавиши enter для формы checkout
   $('#removeEnterEvent').keypress(e => {return e.keyCode != 13});
 
-  // Активируем enter для нашего поля с подсказками submit чтобы отрабатывали подсказки при событии change инпута
-  // $('#billing_address_1').on('keyup', e => {
-  //   e.preventDefault();
-  //   if (e.keyCode = 13) {
-  //     $('#billing_address_1').val($('#billing_address_1').val().replace(/ $/g, ''));
-  //   }
-  // });
-
   // При событии инпута запускаем верификацию введёных данных.
-  $('#billing_address_1').focusout(function (e) {
-    $(this).val($(this).val().replace(/ $/g, ''));
-  });
-  $('#billing_address_1').on('change', function (e) {
-    geocode();
+  suggestView.events.add('select', function (e) {
+    geocode(e.get('item').value)
   });
 
-  function geocode() {
-    // Забираем запрос из поля ввода.
-    let request = $('#billing_address_1').val();
-    // Геокодируем введённые данные.
-    ymaps.geocode(request).then(function (res) {
+  function geocode(inputValue) {
+    // Геокодируем введённые в input данные.
+    ymaps.geocode(inputValue).then(function (res) {
       let obj = res.geoObjects.get(0),
         error, hint;
 

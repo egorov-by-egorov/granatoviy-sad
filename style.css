@@ -3366,9 +3366,11 @@ button.swiper-pagination-bullet {
 
 /* End Phones */
 
-.map,
-.delivery_map {
+.map {
     height: 380px;
+}
+.delivery_map {
+    height: 450px;
 }
 .map-sidebar {
     height: 230px;
