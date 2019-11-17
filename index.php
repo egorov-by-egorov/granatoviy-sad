@@ -111,7 +111,7 @@
 							
 						</div>
                         <div class="grid-item">
-							<a href="./product-category/steyki-bbq/">
+							<a href="./product-category/shahliki/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Шашлыки" src="<?php bloginfo(template_url); ?>/assets/images/shashlyk.jpg">
 								<h3 class="about__menu-gallery-title">Шашлыки</h3>
