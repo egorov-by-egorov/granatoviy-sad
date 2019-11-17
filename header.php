@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-	
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width,initial-scale=1" name="viewport">
@@ -9,8 +8,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="//leclick.ru/reservation/css/style.css" />
-<script>window.onload=function(){var e,t=document.getElementsByTagName("head")[0];void 0===window.jQuery&&((e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/js/libs/jquery.js",t.appendChild(e));(e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/reservation/js/all.in.one.js",t.appendChild(e)};</script>
-
+		<script>window.onload=function(){var e,t=document.getElementsByTagName("head")[0];void 0===window.jQuery&&((e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/js/libs/jquery.js",t.appendChild(e));(e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/reservation/js/all.in.one.js",t.appendChild(e)};</script>
+		
 	</head>
 	
     <body>
@@ -32,34 +31,21 @@
 									<div class="d-lg-block d-none">
 										<button class="main__btn main__btn--book" data-toggle="modal" data-target="#modal_book"><i class="far fa-calendar-alt"></i> Забронировать стол</button>
 									</div>
-									
-									<!-- <div class="d-none d-sm-block">
-										<a class="header__phone" href="">+7 (499) 340-25-52</a>
-									</div>-->
-									
-									<!-- Sidebar btn -->
 									<button class="sidebar-btn" aria-label="Меню">
 										<span></span>
 									</button>
-									
 								</div>
-								
 							</div>
 						</div>
-						
 					</div>
                     <div class="container-fluid p-0 container-custom">
-						
                         <div class="row align-items-center">
-                            <!-- Mobile phone btn -->
-                            
                             <div class="header__logo col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2">
                                 <?php the_custom_logo( $blog_id ); ?>
 							</div>
 							<div class="col-2 col-sm-2 mobile-phone__dropdown">
-							
-	                          <button class="mobile-phone__btn" type="button">
-	                               <i class="fas fa-map-marker-alt"></i>
+								<button class="mobile-phone__btn" type="button">
+									<i class="fas fa-map-marker-alt"></i>
 								</button>
 								<ul class="dropdown-list">
 									<li class="dropdown-item">
@@ -73,65 +59,38 @@
 								</ul>
 							</div>
 							<div class="col-2 col-sm-2 mobile-booking">
-							<button class="mobile-book" data-toggle="modal" data-target="#modal_book"><i class="far fa-calendar-alt"></i></button>
+								<button class="mobile-book" data-toggle="modal" data-target="#modal_book"><i class="far fa-calendar-alt"></i></button>
 							</div>
-							
-                            <!-- Mobile btn-->
                             <button class="col-2 col-sm-2 mobile-btn" type="button">
                                 <span></span>
 							</button>
-							
                             <div class="col-md-10 col-lg-10 col-xl-10 align-items-center justify-content-center p-md-0">
-                                
                                 <nav class="header__nav p-0">
                                     <div class="row justify-content-end align-items-center m-0">
-                                        <?php wp_nav_menu( array(
-                                            'container'       => false,
-                                            'menu'            => 'menu-1',
-                                            'menu_class'      => 'header__nav-list',
-                                            'echo'            => true,
-                                            'fallback_cb'     => 'wp_page_menu',
-                                            'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-                                            'depth'           => 0,
-                                            'walker'          => ''
-										) ); ?>
-                                        
+                                        <ul id="menu-menu-1" class="header__nav-list">
+											<li id="menu-item-15" class="menu-item menu-item-home"><a href="https://granatoviy-sad.ru/">Главная</a></li>
+											<li id="menu-item-37" class="menu-item"><a href="https://granatoviy-sad.ru/about-page/">Рестораны</a></li>
+											<li id="menu-item-782" class="menu-item"><a href="https://granatoviy-sad.ru/shop/">Меню</a></li>
+											<li id="menu-item-828" class="menu-item"><a href="https://granatoviy-sad.ru/galereya/">Галерея</a></li>
+											<li id="menu-item-38" class="menu-item"><a href="https://granatoviy-sad.ru/term-delivery/">Условия доставки</a></li>
+											<li id="menu-item-827" class="menu-item"><a href="https://granatoviy-sad.ru/kontakty/">Контакты</a></li>
+										</ul>
 									</div>
 								</nav>
-								
 							</div>
-							
-                           <!-- <div class="col-sm-12 col-md-3 col-lg-4 col-xl-4 p-0 d-flex align-items-center justify-content-end line">
-                                <div class="d-lg-block d-none">
-                                    <button class="main__btn main__btn--book" data-toggle="modal" data-target="#modal_book">Забронировать стол</button>
-								</div>
-								
-                                
-                                <button class="sidebar-btn" type="button">
-                                    <span></span>
-								</button>
-								
-							</div>-->
-							
                             <aside class="nav-sidebar">
                                 <nav class="nav-sidebar-nav">
-                                    <?php wp_nav_menu( array(
-                                        'container'       => false,
-                                        'menu'            => 'nav-sidebar__menu',
-                                        'menu_class'      => 'nav-sidebar__list',
-                                        'echo'            => true,
-                                        'fallback_cb'     => 'wp_page_menu',
-                                        'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-                                        'depth'           => 0,
-                                        'walker'          => '',
-									) ); ?>
+                                    <ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/restoran-marino/">Ресторан в Марьино</a></li>
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/night-club/">Night club</a></li>
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/awards/">Награды</a></li>
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/bankets/">Банкеты/кейтеринг</a></li>
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/vacancy/">Вакансии</a></li>
+										<li class="menu-item"><a href="https://granatoviy-sad.ru/regulations/">Правила</a></li>
+									</ul>
 								</nav>
-								
-								
-								
                                 <section class="sidebar__contact">
                                     <div class="container-fluid p-0">
-										
                                         <div class="contact__box sidebar__contact__box">
 											
                                             <div class="row p-0 m-0">
@@ -161,17 +120,11 @@
 													</li>
 												</ul>
 											</div>
-											
 										</div>
-										
-										
-<!--                                        <div id="map-sidebar" class="map-sidebar"></div>-->
-
 									</div>
 								</section>
 							</aside>
-							
 						</div>
 					</div>
 				</div>
-			</header>									
+			</header>															
