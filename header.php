@@ -68,12 +68,12 @@
                                 <nav class="header__nav p-0">
                                     <div class="row justify-content-end align-items-center m-0">
                                         <ul id="menu-menu-1" class="header__nav-list">
-											<li id="menu-item-15" class="menu-item menu-item-home"><a href="https://granatoviy-sad.ru/">Главная</a></li>
-											<li id="menu-item-37" class="menu-item"><a href="https://granatoviy-sad.ru/about-page/">Рестораны</a></li>
-											<li id="menu-item-782" class="menu-item"><a href="https://granatoviy-sad.ru/shop/">Меню</a></li>
-											<li id="menu-item-828" class="menu-item"><a href="https://granatoviy-sad.ru/galereya/">Галерея</a></li>
-											<li id="menu-item-38" class="menu-item"><a href="https://granatoviy-sad.ru/term-delivery/">Условия доставки</a></li>
-											<li id="menu-item-827" class="menu-item"><a href="https://granatoviy-sad.ru/kontakty/">Контакты</a></li>
+											<li id="menu-item-15" class="menu-item menu-item-home"><a href="/">Главная</a></li>
+											<li id="menu-item-37" class="menu-item"><a href="/about-page/">Рестораны</a></li>
+											<li id="menu-item-782" class="menu-item"><a href="/shop/">Меню</a></li>
+											<li id="menu-item-828" class="menu-item"><a href="/galereya/">Галерея</a></li>
+											<li id="menu-item-38" class="menu-item"><a href="/term-delivery/">Условия доставки</a></li>
+											<li id="menu-item-827" class="menu-item"><a href="/kontakty/">Контакты</a></li>
 										</ul>
 									</div>
 								</nav>
@@ -81,12 +81,13 @@
                             <aside class="nav-sidebar">
                                 <nav class="nav-sidebar-nav">
                                     <ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/restoran-marino/">Ресторан в Марьино</a></li>
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/night-club/">Night club</a></li>
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/awards/">Награды</a></li>
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/bankets/">Банкеты/кейтеринг</a></li>
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/vacancy/">Вакансии</a></li>
-										<li class="menu-item"><a href="https://granatoviy-sad.ru/regulations/">Правила</a></li>
+										<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
+										<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
+										<li class="menu-item"><a href="/night-club/">Night club</a></li>
+										<li class="menu-item"><a href="/awards/">Награды</a></li>
+										<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
+										<li class="menu-item"><a href="/vacancy/">Вакансии</a></li>
+										<li class="menu-item"><a href="/regulations/">Правила</a></li>
 									</ul>
 								</nav>
                                 <section class="sidebar__contact">
