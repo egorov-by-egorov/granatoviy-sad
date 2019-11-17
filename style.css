@@ -861,8 +861,22 @@ div.about__menu-gallery {
 }
 
 .about__desc p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.7;
+	margin-bottom:10px
+}
+
+.about__desc p a {color:#e41b57}
+
+.about__desc img {
+
+    float: right;
+    margin: 0px 15px;
+    width: 40%;
+    position: relative;
+    top: -80px;
+	margin-bottom:-60px
+
 }
 
 .about__container {
