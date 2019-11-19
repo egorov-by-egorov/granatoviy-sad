@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="col-md-3 col-lg-3 col-xl-3 col-6 gs-productlist-top" <?php wc_product_class(); ?>>
+<div class="col-md-4 col-lg-4 col-xl-4 col-6 gs-productlist-top" <?php wc_product_class(); ?>>
 	<div class="gs-productlist-mid">
 	<?php
 	/**

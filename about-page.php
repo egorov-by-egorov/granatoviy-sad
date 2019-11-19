@@ -54,10 +54,10 @@
 							
                             <?php
 								$posts = get_posts( array(
-                                'numberposts' => -1,
+                                'numberposts' => 8,
                                 'category_name'    => 'porechni-rest',
                                 'orderby'     => 'date',
-                                'order'       => 'ASC',
+                                'order'       => 'DESC',
                                 'post_type'   => 'post',
                                 'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 								) );
@@ -96,10 +96,10 @@
 							
                             <?php
 								$posts = get_posts( array(
-                                'numberposts' => -1,
+                                'numberposts' => 8,
                                 'category_name'    => 'cherkaski-rest',
                                 'orderby'     => 'date',
-                                'order'       => 'ASC',
+                                'order'       => 'DESC',
                                 'post_type'   => 'post',
                                 'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 								) );
@@ -138,10 +138,10 @@
 							
                             <?php
 								$posts = get_posts( array(
-                                'numberposts' => -1,
+                                'numberposts' => 8,
                                 'category_name'    => 'night-club',
                                 'orderby'     => 'date',
-                                'order'       => 'ASC',
+                                'order'       => 'DESC',
                                 'post_type'   => 'post',
                                 'suppress_filters' => false, // подавление работы фильтров изменения SQL запроса
 								) );

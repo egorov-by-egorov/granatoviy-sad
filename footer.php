@@ -47,12 +47,13 @@
                                         <div class="col-lg-6 col-md-6">
                                             <nav class="footer-nav">
 												<ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/restoran-marino/">Ресторан в Марьино</a></li>
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/night-club/">Night club</a></li>
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/awards/">Награды</a></li>
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/bankets/">Банкеты/кейтеринг</a></li>
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/vacancy/">Вакансии</a></li>
-													<li class="menu-item"><a href="https://granatoviy-sad.ru/regulations/">Правила</a></li>
+													<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
+													<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
+													<li class="menu-item"><a href="/night-club/">Night club</a></li>
+													<li class="menu-item"><a href="/awards/">Награды</a></li>
+													<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
+													<li class="menu-item"><a href="/vacancy/">Вакансии</a></li>
+													<li class="menu-item"><a href="/regulations/">Правила</a></li>
 												</ul>
 											</nav>
 										</div>

@@ -1,5 +1,13 @@
 <?php
 
+//function wpb_image_editor_default_to_gd( $editors ) {
+//    $gd_editor = 'WP_Image_Editor_GD';
+//    $editors = array_diff( $editors, array( $gd_editor ) );
+//    array_unshift( $editors, $gd_editor );
+//    return $editors;
+//}
+//add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
+
 //     DUMPER отладчик
 function dumper ($obj)
 {
@@ -63,7 +71,7 @@ function dumperGet(&$obj, $leftSp = "")
     	wp_enqueue_script( 'mask-script', get_template_directory_uri() . '/assets/js/jquery.mask.min.js',  array('jquery'), null, true );
 //		jquery.suggestions (CHECKOUT page (подсказка для поля с адресом))
     	wp_enqueue_script( 'suggestions-script', get_template_directory_uri() . '/assets/js/jquery.suggestions.min.js',  array('jquery'), null, true );
-        if (is_checkout()) {
+        if (is_checkout() || is_page('term-delivery')) {
 //            Yandex main_map Init
             wp_enqueue_script( 'delivery_map-script', get_template_directory_uri() . '/assets/js/delivery_map.js', array('jquery'), null, true  );
         } else {
@@ -118,8 +126,7 @@ function dumperGet(&$obj, $leftSp = "")
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_catalog_ordering', 30 );
     // Remove the result count from WooCommerce
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
-    // Remove link to product page
-    remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+    
     add_theme_support( 'menus' );
 	
 	
@@ -194,10 +201,10 @@ add_filter( 'woocommerce_email_recipient_new_order', 'additional_email_recipient
 function additional_email_recipient( $recipient, $order ) {
     if ( ! is_a( $order, 'WC_Order' ) ) return $recipient;
     if( $order->get_shipping_method() == 'Доставка из ресторана в Марьино' ){
-        $recipient .= ',marino@granatoviy-sad.ru';
+        $recipient .= ',marinoorder@granatoviy-sad.ru';
     }
 	else if ( $order->get_shipping_method() == 'Доставка из ресторана в Соколе' ){
-        $recipient .= ',sokol@granatoviy-sad.ru';
+        $recipient .= ',sokolorder@granatoviy-sad.ru';
     }
     return $recipient;
 }

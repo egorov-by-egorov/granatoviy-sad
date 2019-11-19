@@ -12,4 +12,5 @@ Template Name: Доставка
  		
  	</div>
  </section>
+
 <?php get_footer(); ?>
