@@ -34,7 +34,7 @@
 	<div class="container-custom">
 		<div class="row ">
 			
-			
+				<?php  if (!wp_is_mobile() ): ?>
 			<div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 shop__sidebar">
 				<?php echo do_shortcode('[wcas-search-form]'); ?>
 				<?php wp_nav_menu( array(
@@ -48,6 +48,7 @@
 					'walker'          => '',
 				) ); ?>
 			</div>
+			<?php endif; ?>
 			<div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 shop_single">
 				<div class="row product_area">
 					<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><?php do_action( 'woocommerce_before_single_product_summary' );	?></div>
