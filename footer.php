@@ -5,7 +5,6 @@
     <section class="contact">
         <div class="container-fluid p-0">
             <p class="line-granat"></p>
-            <h3 class="contact__title">Контакты</h3>
             <div class="row align-items-center m-0">
 				<?php  if (!wp_is_mobile() ): ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
@@ -13,9 +12,11 @@
 						echo is_page('term-delivery');
                         if (is_checkout() || is_page('term-delivery')) {
 						?>
+						
+						<h3 class="contact__title">Зоны доставки ресторанов</h3>
 						<div id="delivery_map" class="delivery_map"></div>
 						<?php
-							} else {
+							} else if (is_page( 825 )) {
 						?>
 						<div id="map" class="map"></div>
 						<?php
