@@ -1416,7 +1416,7 @@ padding: 30px 3%*/
 .woocommerce{padding:0 15px}
 .gs-productlist-mid {padding:15px 20px;border:2px solid #ccc;margin-bottom:20px; font-size: 16px;border-radius: 3px}
 .gs-productlist-mid img{margin:0 auto;display:block}
-.gs-productlist-mid h2{font-size:18px;font-weight:500;margin:15px 0; min-height: 42px;max-height: 42px; overflow: hidden;}
+.gs-productlist-mid h2{font-size:18px;font-weight:500;margin:15px 0; min-height: 42px; height:42px; max-height: 42px; overflow: hidden;}
 .gs-productlist-mid span.title-description{float:left;width:100%;margin-bottom:20px}
 .gs-productlist-mid form button{float:right !important;background-color:#76c27e !important;color:#fff !important;font-size:15px !important;text-transform:uppercase}
 .gs-productlist-mid span.price span{font-weight:500;font-size:18px}
@@ -2573,7 +2573,14 @@ button.swiper-pagination-bullet {
     }
 
     .gs-productlist-mid h2{font-size:14px;min-height:0}
-    .woocommerce-loop-product__custom-description{font-size:12px;min-height:30px}
+	.woocommerce-loop-product__custom-description {
+    font-size: 12px;
+    min-height: 30px;
+    text-overflow: ellipsis;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
     .gs-productlist-mid{padding:10px 10px}
     .nav-sidebar{width:35%;right:-35%}
     .nav-sidebar--active{right:0}
@@ -2791,6 +2798,7 @@ button.swiper-pagination-bullet {
     .about__desc {
         padding: 0;
         margin-bottom: 30px;
+		margin-top: 20px;
     }
     .about {
         padding-top: 0;
