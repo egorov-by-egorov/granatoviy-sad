@@ -48,8 +48,6 @@ Template Name: Вакансия (Официант)
                  <li class="vacancy__desc-item">Стремительный карьерный рост</li>
              </ul>
 
-             <button class="vacancy__link" type="button">Оставить заявку</button>
-
 
          </div>
 

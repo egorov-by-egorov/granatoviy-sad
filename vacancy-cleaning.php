@@ -36,8 +36,6 @@ Template Name: Вакансия (Уборщица-посудомойщица)
                  <li class="vacancy__desc-item">возможность работать рядом с домом</li>
              </ul>
 
-             <button class="vacancy__link" type="button">Оставить заявку</button>
-
          </div>
 
      </div>
