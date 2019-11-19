@@ -17,37 +17,37 @@ Template Name: Награды
         <div class="awards__gallery">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards1.png" class="img-zoom">
+                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards1.jpg" class="img-zoom">
                         <div class="wow fadeIn" data-wow-duration="0.4s">
-                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards1.png">
+                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards1.jpg">
                         </div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards3.png" class="img-zoom">
+                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards3.jpg" class="img-zoom">
                         <div class="wow fadeIn" data-wow-duration="0.4s">
-                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards3.png">
+                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards3.jpg">
                         </div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards4.png" class="img-zoom">
+                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards4.jpg" class="img-zoom">
                         <div class="wow fadeIn" data-wow-duration="0.4s">
-                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards4.png">
+                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards4.jpg">
                         </div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards5.png" class="img-zoom">
+                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards5.jpg" class="img-zoom">
                         <div class="wow fadeIn" data-wow-duration="0.4s">
-                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards5.png">
+                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards5.jpg">
                         </div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards2.png" class="img-zoom">
+                    <a href="<?php bloginfo(template_url); ?>/assets/images/awards/awards2.jpg" class="img-zoom">
                         <div class="wow fadeIn" data-wow-duration="0.4s">
-                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards2.png">
+                        <img alt="" src="<?php bloginfo(template_url); ?>/assets/images/awards/awards2.jpg">
                         </div>
                     </a>
                 </div>

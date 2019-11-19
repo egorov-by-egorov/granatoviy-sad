@@ -28,18 +28,18 @@ function initDeliveryMap() {
       // Находим полигон, в который входят переданные координаты.
       polygon = deliveryZones.searchContaining(coords).get(0);
     if (polygon) {
+      $('#shipping_method input').removeAttr('checked');
       switch(polygon.properties.get('rest')) {
         case 'Сокол':
-          console.log('СОКОЛ');
-          $('#shipping_method input').removeAttr('checked', 'checked');
+          $('#place_order').show();
           $('#shipping_method_0_free_shipping4').attr('checked', 'checked');
           break;
         case 'Марьино':
-          console.log('МАРЬИНО');
-          $('#shipping_method input').removeAttr('checked', 'checked');
+          $('#place_order').show();
           $('#shipping_method_0_flat_rate2').attr('checked', 'checked');
           break;
       }
+
       // Уменьшаем прозрачность всех полигонов, кроме того, в который входят переданные координаты.
       deliveryZones.setOptions('fillOpacity', 0.4);
       polygon.options.set('fillOpacity', 0.8);
@@ -58,7 +58,9 @@ function initDeliveryMap() {
         });
       }
     } else {
-      console.log('Вне зоны');
+      $('.shipping_method').removeAttr('checked');
+      $('.place_order_hook').hide();
+      showError('Адрес не обслуживается!');
       // Если переданные координаты не попадают в полигон, то задаём стандартную прозрачность полигонов.
       deliveryZones.setOptions('fillOpacity', 0.4);
       // Перемещаем метку по переданным координатам.

@@ -15,6 +15,14 @@
 		<link rel="stylesheet" href="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/css/swiper.min.css">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
+				
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide3.jpg" alt="Меню ресторанов" />
+					<div class="container swiper-item">
+						<a class="main__btn main__btn--book single_a" href="/shop/" style="">Посмотреть меню</a>
+						</div>
+				</div>
+				
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" alt="Забронировать стол" />
 					<div class="container swiper-item">
@@ -22,13 +30,7 @@
 						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
 					</div>
 				</div>
-				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide2.jpg" alt="Меню ресторанов" />
-					<div class="container swiper-item">
-						<span>Выбирайте из огромного количества блюд</span>
-						<a class="main__btn main__btn--book" href="/shop/">Посмотреть меню</a>
-					</div>
-					</div>
+				
 			</div>
 			<div class="swiper-pagination swiper-pagination-white"></div>
 			<div class="swiper-button-next swiper-button-white"></div>
