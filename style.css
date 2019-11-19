@@ -1555,7 +1555,7 @@ span.rur span { display: none; }
 /*cart-end*/
 
 /*checkout*/
-/*.gscheckbill label{display:none !important}*/
+.gscheckbill label{display:none !important}
 .gscheckbill .form-row-name:before{content:"Контакты" !important;margin:15px 0}
 .gscheckbill .form-row-domo:before{content:"Дополнительно" !important;margin:15px 0}
 .gscheckbill .form-row.notes:before{content:"Комментарии" !important;margin:15px 0}
