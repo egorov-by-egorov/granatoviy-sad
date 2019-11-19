@@ -19,6 +19,7 @@
 
 			<div class="entry-content">
 				<div class="row">
+				<?php  if (!wp_is_mobile() ): ?>
 					<div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 shop__sidebar">
 						<?php echo do_shortcode('[wcas-search-form]'); ?>
 						<?php wp_nav_menu( array(
@@ -32,6 +33,7 @@
 							'walker'          => '',
 						) ); ?>
 					</div>
+					<?php endif; ?>
 					<div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 shop__main-category">
 						<?php
 							the_content();
