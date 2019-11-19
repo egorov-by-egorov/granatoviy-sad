@@ -190,7 +190,7 @@ aria-hidden="true">
 		</div>
 	</div>
 </div>
-<div class="mobfixedphone"><a href="tel:+74993402552"><i class="fa fa-phone" aria-hidden="true"></i></a></div>
+
 <a href="#wrapper" class="scrollto scroll__top"></a>
 
 <!-- YANDEX MAP -->
