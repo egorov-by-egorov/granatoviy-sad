@@ -446,7 +446,7 @@ textarea {
     margin-right: 25px
 }
 
-.menu-item:last-child {
+.header__nav .menu-item:last-child {
     margin-right: 0;
 }
 
@@ -604,11 +604,10 @@ textarea {
     padding-top: 155px;
 }
 
-.swiper-bg {position:absolute; left:0; top:0}
+.swiper-bg {position:absolute; left:0; bottom:0}
 .swiper-item {
     z-index: 10;
     position: relative;
-	padding-left:50%;
 	height:320px
 }
 
@@ -624,10 +623,8 @@ textarea {
 
 .swiper-item a {
 	position:absolute;
-   right:220px;
-   top:180px;}
-   
-   .swiper-item a.single_a {bottom:30px !important; top:auto !important; right:0px !important}
+   left:calc(50% - 100px);
+   bottom:30px !important; width:200px; text-align:center; top:auto !important; }
 
 .hero__slider-item {
     background-position: center;
@@ -938,6 +935,20 @@ div.about__menu-gallery {
 }
 
 /* End About */
+
+/*//////////////////////*/
+
+/* Press */
+
+.press_item  {margin-bottom:30px; }
+.p_inner  {border-bottom:2px solid #ddd }
+.press_item  a {display:block; margin-top:10px}
+.press_item  img {height:50px; width:auto; margin:15px 0 5px 0}
+.press_item  .p_desc {font-size:12px; line-height:14px; display:block; height:40px; overflow:hidden; color:#777}
+.press_item  .p_title {font-size:19px; color:#111}
+
+
+/* End Press */
 
 /*//////////////////////*/
 

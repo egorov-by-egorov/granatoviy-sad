@@ -53,7 +53,7 @@
 													<li class="menu-item"><a href="/night-club/">Night club</a></li>
 													<li class="menu-item"><a href="/awards/">Награды</a></li>
 													<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
-													<li class="menu-item"><a href="/vacancy/">Вакансии</a></li>
+													<li class="menu-item"><a href="/press/">Пресса о нас</a></li>
 													<li class="menu-item"><a href="/regulations/">Правила</a></li>
 												</ul>
 											</nav>

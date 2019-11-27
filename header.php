@@ -84,9 +84,9 @@
 										<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
 										<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
 										<li class="menu-item"><a href="/night-club/">Night club</a></li>
-										<li class="menu-item"><a href="/awards/">Награды</a></li>
 										<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
-										<li class="menu-item"><a href="/vacancy/">Вакансии</a></li>
+										<li class="menu-item"><a href="/press/">Пресса о нас</a></li>										
+										<li class="menu-item"><a href="/awards/">Награды</a></li>
 										<li class="menu-item"><a href="/regulations/">Правила</a></li>
 									</ul>
 								</nav>
@@ -102,7 +102,7 @@
                                                         <span>Чапаевский пер. 10/2</span>
 													</li>
                                                     <li class="contact__address">
-                                                        <span><a href="tel:+74950323777">+7(495) 032-37-77</a></span>
+                                                        <span><a href="tel:+74950323777">+7(495) 2-555-333</a></span>
 													</li>
                                                     <li class="contact__address">
                                                         <span>info@granatoviy-sad.ru</span>
