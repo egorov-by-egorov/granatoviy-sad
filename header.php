@@ -83,7 +83,7 @@
                                     <ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
 										<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
 										<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
-										<li class="menu-item"><a href="/night-club/">Night club</a></li>
+										<li class="menu-item"><a href="/karaoke/">Караоке бар</a></li>
 										<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
 										<li class="menu-item"><a href="/press/">Пресса о нас</a></li>										
 										<li class="menu-item"><a href="/awards/">Награды</a></li>
