@@ -843,6 +843,10 @@ div.about__menu-gallery {
 }
 
 
+.spider_popup_close_fullscreen {
+    color:     #fff !important;
+}
+
 
 .about__menu-gallery-title {
     position: absolute;
