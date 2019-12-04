@@ -19,14 +19,13 @@
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide3.jpg" alt="Меню ресторанов" />
 					<div class="container swiper-item">
-						<a class="main__btn main__btn--book single_a" href="/shop/" style="">Посмотреть меню</a>
+						<a class="main__btn main__btn--book single_a" href="/menu/" style="">Посмотреть меню</a>
 						</div>
 				</div>
 				
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" alt="Забронировать стол" />
 					<div class="container swiper-item">
-						<span>Лучшие блюда русской и кавказской кухни</span>
 						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
 					</div>
 				</div>
@@ -67,7 +66,7 @@
 				
 				<div class="container-custom">
 					<p class="line-granat"></p>
-					<h2 class="main__title">Наше меню</h2>
+					<h2 class="main__title">Меню доставки</h2>
 				</div>
 				
 				<div class="container-custom">
@@ -137,7 +136,7 @@
 					</div>
 				</div>
                 <div class="text-center">
-                    <a href="./shop/" class="main__btn main__btn--link">
+                    <a href="./menu/" class="main__btn main__btn--link">
                         Больше меню <img class="bluedish" alt="больше" src="<?php bloginfo(template_url); ?>/assets/images/dish-icon.svg"><img class="whitedish" alt="больше" src="<?php bloginfo(template_url); ?>/assets/images/dish-icon-white.svg">
 					</a>
 				</div>
@@ -163,7 +162,7 @@
 							<p>В ресторане вы найдете не только изысканные блюда, качественные вина и приятную атмосферу, но и уважительное отношение со стороны персонала. Вас действительно встретят как гостей: заглянув в «Гранатовый сад №1» один раз, многие посетители ресторана становятся его постоянными клиентами. </p>							
 							<p><b>Зайдите и убедитесь во всем на собственном опыте!</b></p>							
 							<p>И конечно, в наших ресторанах вас ждет огромный <a href="/bankets/">банкетный зал</a>, стильный и оригинальный интерьер, лучшее музыкальное оборудование. По индивидуальному заказу клиента мы украшаем зал в соответствии с тематикой и направленностью праздника, предлагаем яркие и нестандартные решения и креативность. Для проведения свадеб и юбилеев мы индивидуально составляем концепцию праздника, продумываем размещение столов, подбираем лучшую команду для обслуживания. Чтобы громко и отметить свое мероприятий вы также можете заказать ди-джея или любимых музыкальных исполнителей.</p>
-							<p>Ресторан также осуществляет <a href="/shop/">доставку еды</a> по всей Москве. Мы гарантируем оперативную доставку и превосходное качество наших блюд! Стоимость доставки бесплатная. </p>
+							<p>Ресторан также осуществляет <a href="/menu/">доставку еды</a> по всей Москве. Мы гарантируем оперативную доставку и превосходное качество наших блюд! Стоимость доставки бесплатная. </p>
 						</div>
 					</div>
 				</div>
@@ -187,7 +186,7 @@
 					<div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 p-0">
 						<div class="about__container-item about__container-item--bg4">
 							<h3 class="about__container-title">Меню</h3>
-							<a href="./shop/" class="main__btn main__btn--more">Подробнее</a>
+							<a href="./menu/" class="main__btn main__btn--more">Подробнее</a>
 						</div>
 					</div>
 				</div>

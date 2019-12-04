@@ -2,14 +2,30 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta content="width=device-width,initial-scale=1, user-scalable=no" name="viewport" >
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="//leclick.ru/reservation/css/style.css" />
 		<script>window.onload=function(){var e,t=document.getElementsByTagName("head")[0];void 0===window.jQuery&&((e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/js/libs/jquery.js",t.appendChild(e));(e=document.createElement("script")).type="text/javascript",e.src="//leclick.ru/reservation/js/all.in.one.js",t.appendChild(e)};</script>
-		
+		<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1012511649130642');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1012511649130642&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 	</head>
 	
     <body>
@@ -37,7 +53,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+						</div>
                     <div class="container-fluid p-0 container-custom">
                         <div class="row align-items-center">
                             <div class="header__logo col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2">
@@ -70,7 +86,7 @@
                                         <ul id="menu-menu-1" class="header__nav-list">
 											<li id="menu-item-15" class="menu-item menu-item-home"><a href="/">Главная</a></li>
 											<li id="menu-item-37" class="menu-item"><a href="/about-page/">Рестораны</a></li>
-											<li id="menu-item-782" class="menu-item"><a href="/shop/">Меню</a></li>
+											<li id="menu-item-782" class="menu-item"><a href="/menu/">Меню</a></li>
 											<li id="menu-item-828" class="menu-item"><a href="/galereya/">Галерея</a></li>
 											<li id="menu-item-38" class="menu-item"><a href="/term-delivery/">Условия доставки</a></li>
 											<li id="menu-item-827" class="menu-item"><a href="/kontakty/">Контакты</a></li>
