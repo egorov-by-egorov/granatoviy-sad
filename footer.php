@@ -4,16 +4,20 @@
 	
     <section class="contact">
         <div class="container-fluid p-0">
-            <p class="line-granat"></p>
+        	<? if (!wp_is_mobile() ): ?>
+            	<p class="line-granat"></p>
+        	<? endif; ?>
             <div class="row align-items-center m-0">
-				<?php  if (!wp_is_mobile() ): ?>
+				<?php // if (!wp_is_mobile() ): ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
                     <?php
 						echo is_page('term-delivery');
                         if (is_checkout() || is_page('term-delivery')) {
 						?>
-						
-						<h3 class="contact__title">Зоны доставки ресторанов</h3>
+						<? if (!wp_is_mobile() ): ?>
+							<h3 class="contact__title">Зоны доставки ресторанов</h3>
+						<? endif; ?>
+
 						<div id="delivery_map" class="delivery_map"></div>
 						<?php
 							} else if (is_page( 825 )) {
@@ -23,7 +27,7 @@
 						}
 					?>
 				</div>
-				<?php endif; ?>
+				<?php // endif; ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
                     <div class="contact__box">
                         <div class="container p-0">

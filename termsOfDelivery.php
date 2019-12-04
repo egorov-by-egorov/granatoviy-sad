@@ -24,7 +24,7 @@ Template Name: Условия доставки
                 </div>
                 <div class="col-12 col-md-6">
                 <p class="contact__address-subtitle"><b>Ресторан на Чапаевском</b></p>
-                <a href="tel:+74997286656">+7(499) 728-66-56</a>
+                <a href="tel:+74997286656">+7 (495) 2-555-55-1</a>
                 </div>
             </div>
 			<hr>
