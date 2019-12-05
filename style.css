@@ -843,9 +843,7 @@ div.about__menu-gallery {
 }
 
 
-.spider_popup_close_fullscreen {
-    color:     #fff !important;
-}
+
 
 
 .about__menu-gallery-title {
@@ -1426,13 +1424,14 @@ padding: 30px 3%*/
 
 
 /*shop*/
+
+.woocommerce{padding:0 15px}
 .shop__main-container {padding-top: 200px;}
 .shop__main-title {
     font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.woocommerce{padding:0 15px}
+    text-align: center !important; 
+margin-bottom: 40px;}
+
 .gs-productlist-mid {padding:15px 20px;border:2px solid #ccc;margin-bottom:20px; font-size: 16px;border-radius: 3px}
 .gs-productlist-mid img{margin:0 auto;display:block}
 .gs-productlist-mid h2{font-size:18px;font-weight:500;margin:15px 0; min-height: 42px; height:42px; max-height: 42px; overflow: hidden;}
@@ -1456,6 +1455,7 @@ padding: 30px 3%*/
 .gs-productlist-mid .quantity input{min-width:30%;height:35px}
 .gs-productlist-mid .gswbut{display:inline}
 div.status-publish{margin-top:160px}
+div.status-publish.product {margin-top:30px}
 div.status-publish h1{text-align:center;font-size:30px}
 .woocommerce-loop-category__title {text-align: center;font-size:18px;font-weight:500;margin:15px auto;width: 80%; min-height: 42px;max-height: 65px; overflow: hidden;}
 .shop__cat-item a {display: block;}
@@ -3418,6 +3418,9 @@ button.swiper-pagination-bullet {
     .shop__main-container{padding-top:100px}
     .shop__main-category{padding:0}
     .main-cart img{width:25px}
+	.woocommerce .quantity .qty { max-width: 100%;}
+	.gs-productlist-mid .quantity {display: inline-block; width: 37%;}
+	.woocommerce .cart .button {width: 57%;line-height: 20px;}
     /*woocommerce*/
 
 }
@@ -3495,7 +3498,7 @@ button.swiper-pagination-bullet {
 
 /*single product*/
 
-.product_area {border-bottom:2px solid #eee; margin-bottom:25px}
+.product_area { margin-bottom:50px}
 
 .woocommerce div.product div.summary {
     margin-top:20px
@@ -3512,6 +3515,11 @@ button.swiper-pagination-bullet {
 	margin-bottom:15px
 }
 
+.woocommerce div.product form.cart {
+    margin-bottom: 2em;
+    max-width: 330px;
+}
+
 .shop_attributes span {display:inline-block}
 
 .woocommerce .quantity .qty {
@@ -3519,6 +3527,14 @@ button.swiper-pagination-bullet {
     text-align: center;
     height: 35px;
     width: 80px;
+}
+
+.related.products {border-top:2px solid #eee; margin:30px -15px 15px -15px}
+
+.rel-title {
+    padding: 15px;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 
@@ -3610,4 +3626,9 @@ button.swiper-pagination-bullet {
 
 
 
-/*//////////////////////
+/*//////////////////////*/
+	
+	
+	.spider_popup_close_fullscreen {
+    color: #ffffff !important;
+}

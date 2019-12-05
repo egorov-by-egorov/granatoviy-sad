@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="col-6 col-md-6 col-lg-2 col-xl-2 text-center shop__cat-item">
+<div class="col-6 col-md-6 col-lg-3 col-xl-3 text-center shop__cat-item">
 	<div <?php wc_product_cat_class( '', $category ); ?>>
 		<?php
 		/**

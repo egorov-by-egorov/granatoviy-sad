@@ -23,3 +23,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_sidebar( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
+<?php  if (!wp_is_mobile() ): ?>
+					<div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 shop__sidebar">
+						<?php echo do_shortcode('[wcas-search-form]'); ?>
+						<?php wp_nav_menu( array(
+							'container'       => false,
+							'menu'            => 'woo-sidebar',
+							'menu_class'      => 'gsw-sidebar',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => '',
+						) ); ?>
+					</div>
+					<?php endif; ?>

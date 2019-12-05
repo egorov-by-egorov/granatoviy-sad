@@ -20,6 +20,6 @@
 		exit;
 	}
 ?>
-<div class="gsproducts">
+<div class="gsproducts woocommerce">
 	<div class="row">
 			

@@ -59,7 +59,7 @@ function dumperGet(&$obj, $leftSp = "")
     function my_scripts() {
 //
     	wp_deregister_script( 'jquery' );
-    	wp_register_script( 'jquery',  get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
+    	wp_register_script( 'jquery',  get_template_directory_uri() . '/assets/js/jquery-25.min.js');
     	wp_enqueue_script('jquery');
 //		Bootstrap
         wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), null, true );
@@ -115,12 +115,30 @@ function dumperGet(&$obj, $leftSp = "")
 	*/
     require get_template_directory() . '/inc/template-functions.php';
 	
+	/*Поддержка woocommerce*/
+	
+	function theme_add_woocommerce_support() {
+		add_theme_support( 'woocommerce' );
+	}
+
+	add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	
+
 	
 	// Add short description to product content list
 	add_action( 'woocommerce_after_shop_loop_item_title', 'my_add_short_description', 9 );
     function my_add_short_description() {
         echo '<p class="woocommerce-loop-product__custom-description">' . get_the_excerpt() . '</p><br />';
 	}
+	
+	add_action('woocommerce_archive_description', 'custom_archive_description', 2 );
+function custom_archive_description(){
+    if( is_product_category() ) :
+        remove_action('woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+        add_action( 'woocommerce_after_main_content', 'woocommerce_taxonomy_archive_description', 5 );
+    endif;
+}
 	
     // Remove the sorting dropdown from Woocommerce
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_catalog_ordering', 30 );
