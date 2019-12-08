@@ -162,6 +162,8 @@ textarea {
     text-align: left;
 }
 
+.mtop30 {margin-top:30px}
+
 /* Sidebar btn */
 
 .sidebar-btn {
@@ -1111,7 +1113,7 @@ div.about__menu-gallery {
     font-size: 14px;
 }
 .contact__address-list .contact__address {
-    padding-left: 80px;
+   
 }
 
 
@@ -1682,12 +1684,14 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details{p
 /* contacts-page */
 
 .contact__address-title {
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 15px;
+	margin-top:50px
 }
 .contact__address-subtitle {
     font-size: 13px;
+	margin-top:10px;
 }
 
 /* End contacts-page */
