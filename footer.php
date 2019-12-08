@@ -85,11 +85,9 @@
                                 <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mt-4 mt-md-0">
                                     <div class="row justify-content-center justify-content-lg-end pr-0">
 										
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-9 pr-lg-0">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
                                             <ul class="contact__address-list contact__address-list-1">
-                                                <li class="contact__address">
-                                                    <img src="<?php bloginfo(template_url); ?>/assets/images/contact_icon.svg"
-													alt="icon" class="contact__address-icon">
+                                                <li class="contact__address">                                                   
                                                     <span> Гранатовый сад №1 </span>
                                                     <span> (м. Сокол)</span>
 												</li>
@@ -101,19 +99,12 @@
                                                         <div> +7 (495) 2-555-55-1</div>
 													</a>
 												</li>
-                                                <li class="contact__address">
-                                                    <a href="mailto:info@granatoviy-sad.ru">Email:
-                                                        <div>info@granatoviy-sad.ru</div>
-													</a>
-												</li>
 											</ul>
 										</div>
 										
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-9 pr-lg-0">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
                                             <ul class="contact__address-list contact__address-list-2">
-                                                <li class="contact__address">
-                                                    <img src="<?php bloginfo(template_url); ?>/assets/images/contact_icon.svg"
-													alt="icon" class="contact__address-icon">
+                                                <li class="contact__address">                                                   
                                                     <span> Гранатовый сад №1</span>
                                                     <span> (м. Марьино)</span>
 												</li>
@@ -125,10 +116,28 @@
                                                         <div> +7 (499) 340-01-10</div>
 													</a>
 												</li>
+											</ul>
+										</div>
+										
+										 <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-2">
+                                                <li class="contact__address">                                                   
+                                                    <span> Гранат Холл</span>
+                                                    <span> (м. Люблино)</span>
+												</li>
                                                 <li class="contact__address">
-                                                    <a href="mailto:info@granatoviy-sad.ru">Email:
-                                                        <div>info@granatoviy-sad.ru</div>
+                                                    <a href="tel:+79252122222">Бронь столов:
+                                                        <div> +7 (925) 212-22-22</div>
 													</a>
+												</li>
+											</ul>
+										</div>
+										
+										
+										 <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-2">                                                
+                                                <li class="contact__address text-center mtop30">
+                                                    <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
 												</li>
 											</ul>
 										</div>
