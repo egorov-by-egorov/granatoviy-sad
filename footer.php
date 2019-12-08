@@ -5,7 +5,7 @@
     <section class="contact">
         <div class="container-fluid p-0">
         	<? if (!wp_is_mobile() ): ?>
-            	<p class="line-granat"></p>
+			<p class="line-granat"></p>
         	<? endif; ?>
             <div class="row align-items-center m-0">
 				<?php // if (!wp_is_mobile() ): ?>
@@ -15,9 +15,9 @@
                         if (is_checkout() || is_page('term-delivery')) {
 						?>
 						<? if (!wp_is_mobile() ): ?>
-							<h3 class="contact__title">Зоны доставки ресторанов</h3>
+						<h3 class="contact__title">Зоны доставки ресторанов</h3>
 						<? endif; ?>
-
+						
 						<div id="delivery_map" class="delivery_map"></div>
 						<?php
 							} else if (is_page( 825 )) {
@@ -91,6 +91,10 @@
                                                     <span> Гранатовый сад №1 </span>
                                                     <span> (м. Сокол)</span>
 												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>Чапаевский пер. 10/2</span>
+												</li>
                                                 <li class="contact__address">
                                                     <a href="tel:+74952555333">Бронь столов:
                                                         <div> +7 (495) 2-555-333</div>
@@ -108,6 +112,10 @@
                                                     <span> Гранатовый сад №1</span>
                                                     <span> (м. Марьино)</span>
 												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>Поречная 5/14,стр. 1</span>
+												</li>
                                                 <li class="contact__address">
                                                     <a href="tel:+74993402552">Бронь столов:
                                                         <div> +7 (499) 340-25-52</div>
@@ -119,11 +127,15 @@
 											</ul>
 										</div>
 										
-										 <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
                                             <ul class="contact__address-list contact__address-list-2">
                                                 <li class="contact__address">                                                   
                                                     <span> Гранат Холл</span>
                                                     <span> (м. Люблино)</span>
+												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>ул. Цимлянская 2а</span>
 												</li>
                                                 <li class="contact__address">
                                                     <a href="tel:+79252122222">Бронь столов:
@@ -134,7 +146,7 @@
 										</div>
 										
 										
-										 <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
                                             <ul class="contact__address-list contact__address-list-2">                                                
                                                 <li class="contact__address text-center mtop30">
                                                     <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
@@ -178,61 +190,61 @@
 <div class="modal fade" id="modal_book" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
 aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
-                <button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-				</button>
-			</div>
-            <div class="modal-body">
-                <div class="modal__choose-box">
-                    <p class="line-granat"></p>
-                    <h2 class="main__title">Выберите ресторан</h2>
-                    <div class="row justify-content-around">
-                        <button id="open-maryeno-sokol" class="leclick-reservation book__choose-btn"
-						data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">Сокол
-						</button>
-                        <button id="open-maryeno-rest" class="book__choose-btn" type="button">Марьино</button>
-					</div>
-				</div>
-                <div id="box-maryeno-rest">
-					<?php echo do_shortcode('[contact-form-7 id="5" title="Забронировать стол"]') ?>
-					
-				</div>
-			</div>
-		</div>
+	<div class="modal-content">
+	<div class="modal-header justify-content-center">
+	<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
+	<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
+	<span aria-hidden="true"><i class="fas fa-times"></i></span>
+	</button>
 	</div>
-</div>
-
-<a href="#wrapper" class="scrollto scroll__top"></a>
-
-<!-- YANDEX MAP -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=24149691-1826-4838-ba59-7e142846a30a&lang=ru_RU" type="text/javascript"></script>
-<script>const template_url = '<?= get_bloginfo("template_url"); ?>'</script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+	<div class="modal-body">
+	<div class="modal__choose-box">
+	<p class="line-granat"></p>
+	<h2 class="main__title">Выберите ресторан</h2>
+	<div class="row justify-content-around">
+	<button id="open-maryeno-sokol" class="leclick-reservation book__choose-btn"
+	data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">Сокол
+	</button>
+	<button id="open-maryeno-rest" class="book__choose-btn" type="button">Марьино</button>
+	</div>
+	</div>
+	<div id="box-maryeno-rest">
+	<?php echo do_shortcode('[contact-form-7 id="5" title="Забронировать стол"]') ?>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<a href="#wrapper" class="scrollto scroll__top"></a>
+	
+	<!-- YANDEX MAP -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=24149691-1826-4838-ba59-7e142846a30a&lang=ru_RU" type="text/javascript"></script>
+	<script>const template_url = '<?= get_bloginfo("template_url"); ?>'</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
 	(function (m, e, t, r, i, k, a) {
-		m[i] = m[i] || function () {
-			(m[i].a = m[i].a || []).push(arguments)
-		};
-		m[i].l = 1 * new Date();
-		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+	m[i] = m[i] || function () {
+	(m[i].a = m[i].a || []).push(arguments)
+	};
+	m[i].l = 1 * new Date();
+	k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 	})
 	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 	
 	ym(55655203, "init", {
-		clickmap: true,
-		trackLinks: true,
-		accurateTrackBounce: true,
-		webvisor: true
+	clickmap: true,
+	trackLinks: true,
+	accurateTrackBounce: true,
+	webvisor: true
 	});
-</script>
-<noscript>
+	</script>
+	<noscript>
     <div><img src="https://mc.yandex.ru/watch/55655203" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
-<?php wp_footer(); ?>
-</body>
-
-</html> 
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+	<?php wp_footer(); ?>
+	</body>
+	
+	</html> 		
