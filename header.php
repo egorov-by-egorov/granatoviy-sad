@@ -89,6 +89,7 @@
 											<li id="menu-item-15" class="menu-item menu-item-home"><a href="/">Главная</a></li>
 											<li id="menu-item-37" class="menu-item"><a href="/about-page/">Рестораны</a></li>
 											<li id="menu-item-782" class="menu-item"><a href="/menu/">Меню</a></li>
+											<li id="menu-item-782" class="menu-item"><a href="/granat-holl/">Гранат Холл</a></li>
 											<li id="menu-item-828" class="menu-item"><a href="/galereya/">Галерея</a></li>
 											<li id="menu-item-38" class="menu-item"><a href="/term-delivery/">Условия доставки</a></li>
 											<li id="menu-item-827" class="menu-item"><a href="/kontakty/">Контакты</a></li>

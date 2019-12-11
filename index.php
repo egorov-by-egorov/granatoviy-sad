@@ -30,6 +30,14 @@
 					</div>
 				</div>
 				
+				
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide4.jpg" alt="Гранат Холл" />
+					<div class="container swiper-item">
+						<a class="main__btn main__btn--book" href="/granat-holl" >Посмотреть</a>
+					</div>
+				</div>
+				
 			</div>
 			<div class="swiper-pagination swiper-pagination-white"></div>
 			<div class="swiper-button-next swiper-button-white"></div>
