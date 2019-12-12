@@ -27,6 +27,21 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
+<!-- calltouch -->
+<script type="text/javascript">
+(function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]
+["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]
+["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]
+["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var
+a=d.getElementsByTagName("script")
+[0],s=d.createElement("script"),i=function()
+{a.parentNode.insertBefore(s,a)};s.type="text/javascript";s.async=true;s
+.src="https://mod.calltouch.ru/init.js?id="+cId;if(w.opera=="[object
+Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})
+(window,document,"ct","w08oc8x4");
+</script>
+<!-- calltouch -->
+
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?162",t.onload=function(){VK.Retargeting.Init("VK-RTRG-435087-3Vgwd"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-435087-3Vgwd" style="position:fixed; left:-999px;" alt=""/></noscript>
 	</head>
 	
