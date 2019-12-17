@@ -59,7 +59,7 @@ function dumperGet(&$obj, $leftSp = "")
     function my_scripts() {
 //
     	wp_deregister_script( 'jquery' );
-    	wp_register_script( 'jquery',  get_template_directory_uri() . '/assets/js/jquery-25.min.js');
+    	wp_register_script( 'jquery',  get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
     	wp_enqueue_script('jquery');
 //		Bootstrap
         wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), null, true );

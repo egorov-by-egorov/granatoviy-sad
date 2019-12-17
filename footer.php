@@ -190,61 +190,81 @@
 <div class="modal fade" id="modal_book" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
 aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-	<div class="modal-content">
-	<div class="modal-header justify-content-center">
-	<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
-	<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
-	<span aria-hidden="true"><i class="fas fa-times"></i></span>
-	</button>
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
+				<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"><i class="fas fa-times"></i></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal__choose-box">
+					<p class="line-granat"></p>
+					<h2 class="main__title">Выберите ресторан</h2>
+					<div class="row justify-content-around">
+						<button id="open-maryeno-sokol" class="leclick-reservation book__choose-btn"
+						data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">Сокол
+						</button>
+						<button id="open-maryeno-rest" class="book__choose-btn" type="button">Марьино</button>
+					</div>
+				</div>
+				<div id="box-maryeno-rest">
+					<?php echo do_shortcode('[contact-form-7 id="5" title="Забронировать стол"]') ?>
+					
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="modal-body">
-	<div class="modal__choose-box">
-	<p class="line-granat"></p>
-	<h2 class="main__title">Выберите ресторан</h2>
-	<div class="row justify-content-around">
-	<button id="open-maryeno-sokol" class="leclick-reservation book__choose-btn"
-	data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">Сокол
-	</button>
-	<button id="open-maryeno-rest" class="book__choose-btn" type="button">Марьино</button>
+</div>
+
+<div class="modal fade" id="modal_granat" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
+	aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header justify-content-center">
+					<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
+					<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="fas fa-times"></i></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					
+					<?php echo do_shortcode('[contact-form-7 id="1734" title="Гранат Холл"]') ?>
+					
+					
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-	<div id="box-maryeno-rest">
-	<?php echo do_shortcode('[contact-form-7 id="5" title="Забронировать стол"]') ?>
-	
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	
-	<a href="#wrapper" class="scrollto scroll__top"></a>
-	
-	<!-- YANDEX MAP -->
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=24149691-1826-4838-ba59-7e142846a30a&lang=ru_RU" type="text/javascript"></script>
-	<script>const template_url = '<?= get_bloginfo("template_url"); ?>'</script>
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
+
+<a href="#wrapper" class="scrollto scroll__top"></a>
+
+<!-- YANDEX MAP -->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=24149691-1826-4838-ba59-7e142846a30a&lang=ru_RU" type="text/javascript"></script>
+<script>const template_url = '<?= get_bloginfo("template_url"); ?>'</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
 	(function (m, e, t, r, i, k, a) {
-	m[i] = m[i] || function () {
-	(m[i].a = m[i].a || []).push(arguments)
-	};
-	m[i].l = 1 * new Date();
-	k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		m[i] = m[i] || function () {
+			(m[i].a = m[i].a || []).push(arguments)
+		};
+		m[i].l = 1 * new Date();
+		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 	})
 	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 	
 	ym(55655203, "init", {
-	clickmap: true,
-	trackLinks: true,
-	accurateTrackBounce: true,
-	webvisor: true
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true,
+		webvisor: true
 	});
-	</script>
-	<noscript>
+</script>
+<noscript>
     <div><img src="https://mc.yandex.ru/watch/55655203" style="position:absolute; left:-9999px;" alt=""/></div>
-	</noscript>
-	<!-- /Yandex.Metrika counter -->
-	<?php wp_footer(); ?>
-	</body>
-	
-	</html> 		
+</noscript>
+<!-- /Yandex.Metrika counter -->
+<?php wp_footer(); ?>
+</body>
+
+</html> 		

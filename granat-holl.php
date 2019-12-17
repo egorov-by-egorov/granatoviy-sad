@@ -76,28 +76,13 @@
 		span.holl-loaction, a.holl-tel{font-size:16px;margin:0 10px}
 		.holl-book{margin-top:30px;margin-bottom:0}
 		.holl-book a{font-size:20px}
+		#modal_granat {z-index:9999 !important}
 		}
+		
+		
 	</style>
 	
 	
-	<div class="modal fade" id="modal_granat" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
-	aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header justify-content-center">
-					<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
-					<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"><i class="fas fa-times"></i></span>
-					</button>
-				</div>
-				<div class="modal-body">
-					
-					<?php echo do_shortcode('[contact-form-7 id="1734" title="Гранат Холл"]') ?>
-					
-					
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	
 <?php get_footer(); ?> 

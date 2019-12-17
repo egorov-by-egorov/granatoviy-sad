@@ -846,7 +846,7 @@ div.about__menu-gallery {
 
 
 
-
+.pgtitle {line-height:36px}
 
 .about__menu-gallery-title {
     position: absolute;
@@ -1724,7 +1724,7 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details{p
     width: 100%;
 }
 
-#wpcf7-f5-o1 input[type="tel"],
+#wpcf7-f5-o1 input[type="tel"], #modal_granat input[type="tel"],
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -1740,7 +1740,7 @@ select {
 #wpcf7-f5-o1 select::placeholder {
     color: rgba(0,0,0,0.5);
 }
-#wpcf7-f5-o1 select option {
+#wpcf7-f5-o1 select option, #modal_granat select option{
     color: rgba(0,0,0,0.5);
     font-size: 14px;
 }
@@ -1768,7 +1768,7 @@ select {
     padding:8px 30px
 }
 
-#wpcf7-f5-o1 textarea {
+#wpcf7-f5-o1 textarea, #modal_granat  textarea {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
@@ -3046,7 +3046,7 @@ button.swiper-pagination-bullet {
     /* Modal book */
 
     #modal_book .modal-title{text-align:center}
-    #wpcf7-f5-o1 input[type="tel"],
+    #wpcf7-f5-o1 input[type="tel"], #wpcf7-f1734-o1 input[type="tel"], #wpcf7-f5-o2 input[type="tel"], #wpcf7-f1734-o2 input[type="tel"],
     input[type="text"],
     input[type="number"],
     input[type="date"],
