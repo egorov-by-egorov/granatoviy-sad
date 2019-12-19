@@ -81,7 +81,7 @@
 					<div class="grid">
                         <div class="grid-sizer"></div>
                         <div class="grid-item grid-item--width40">
-                            <a href="./menu-cat/supy/">
+                            <a href="/menu-cat/supy/">
                             	<div class="about__menu-gallery-overlay"></div>
 								<img alt="Горячие блюда" src="<?php bloginfo(template_url); ?>/assets/images/1-soup.jpg">
 								<h3 class="about__menu-gallery-title">Супы</h3>
@@ -89,7 +89,7 @@
 							
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/salaty/">
+							<a href="/menu-cat/salaty/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Салаты" src="<?php bloginfo(template_url); ?>/assets/images/2-salad.jpg">
 								<h3 class="about__menu-gallery-title">Салаты</h3>
@@ -97,7 +97,7 @@
 							
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/zavtraki/">
+							<a href="/menu-cat/zavtraki/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Завтраки" src="<?php bloginfo(template_url); ?>/assets/images/3-breakfast.jpg">
 								<h3 class="about__menu-gallery-title">Завтраки</h3>
@@ -105,14 +105,14 @@
 							
 						</div>
                         <div class="grid-item grid-item--width60">
-							<a href="./menu-cat/deserty/">
+							<a href="/menu-cat/deserty/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Десерты" src="<?php bloginfo(template_url); ?>/assets/images/4-dessert.jpg">
 								<h3 class="about__menu-gallery-title">Десерты</h3>
 							</a>
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/garniry/">
+							<a href="/menu-cat/garniry/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Гарниры" src="<?php bloginfo(template_url); ?>/assets/images/5-pervie-bluda.jpg">
 								<h3 class="about__menu-gallery-title">Гарниры</h3>
@@ -120,14 +120,14 @@
 							
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/shahliki/">
+							<a href="/menu-cat/shashliki/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Шашлыки" src="<?php bloginfo(template_url); ?>/assets/images/shashlyk.jpg">
 								<h3 class="about__menu-gallery-title">Шашлыки</h3>
 							</a>
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/napitki/">
+							<a href="/menu-cat/napitki/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Напитки" src="<?php bloginfo(template_url); ?>/assets/images/7-drinks.jpg">
 								<h3 class="about__menu-gallery-title">Напитки</h3>
@@ -135,7 +135,7 @@
 							
 						</div>
                         <div class="grid-item">
-							<a href="./menu-cat/sousy/">
+							<a href="/menu-cat/sousy/">
 								<div class="about__menu-gallery-overlay"></div>
 								<img alt="Соусы" src="<?php bloginfo(template_url); ?>/assets/images/8-sauces.jpg">
 								<h3 class="about__menu-gallery-title">Соусы</h3>
@@ -144,7 +144,7 @@
 					</div>
 				</div>
                 <div class="text-center">
-                    <a href="./menu/" class="main__btn main__btn--link">
+                    <a href="/menu/" class="main__btn main__btn--link">
                         Больше меню <img class="bluedish" alt="больше" src="<?php bloginfo(template_url); ?>/assets/images/dish-icon.svg"><img class="whitedish" alt="больше" src="<?php bloginfo(template_url); ?>/assets/images/dish-icon-white.svg">
 					</a>
 				</div>
