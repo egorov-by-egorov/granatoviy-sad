@@ -149,7 +149,7 @@ span:focus,
 	width: 100%;
 	background-color: #fff;
 	z-index: 9999;
-	padding-top: 5%;
+	padding-top: 7%;
 /*	overflow-y: scroll;*/
 	overflow: hidden;
 }
@@ -218,21 +218,27 @@ span:focus,
 	font-weight: 700;
 }
 
+
+
 .main__title--decor {
 	font-family: 'Merriweather', serif;
 	font-weight: 400;
+	max-width: 400px;
+	text-align: center;
 }
 
 .main__title--decor:before {
 	display: block;
 	content: url("../images/decor/head-3.svg");
-	margin: 0 0 -10px 0;
+	max-width: 400px;
+	margin: 0 auto -10px auto;
 }
 
 .main__title--decor:after {
 	display: block;
 	content: url("../images/decor/line.svg");
-	margin: -7px 0;
+	max-width: 400px;
+	margin: -7px auto;
 }
 
 .main__desc {
@@ -255,6 +261,7 @@ span:focus,
 	position: relative;
 	padding: 8px 14px;
 	background: #ede4d4 url(../images/ui-bg_glass_70_ede4d4_1x400.png) 50% 50% repeat-x;
+	min-width: 120px;
 }
 
 .main__frame {
@@ -364,7 +371,7 @@ a.ui-button:active,
     background-size:30%;
     padding: 20px;
     border-radius:50%;
-    background-color:rgba(0,0,0,0);
+    background-color:rgba(255,255,255,0.5);
 	border: 1px solid #A99964;
     display: none;
     position: fixed;
@@ -397,10 +404,10 @@ a.ui-button:active,
 .header:after {
 	display: block;
 	position: absolute;
-	top: 61px;
+	top: 71px;
 	content: '';
-	width: 93px;
-	height: 60px;
+	width: 75px;
+	height: 50px;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	z-index: 9;
@@ -438,7 +445,7 @@ a.ui-button:active,
 }
 
 .socials__link {
-	/*display: block;*/
+	display: block;
 	width: 33px;
 /*	margin-right: 10px;*/
 }
@@ -463,6 +470,7 @@ a.ui-button:active,
 
 .header__nav ul {
 	display: flex;
+	align-items: center;
 	color: #fff;
 }
 
@@ -719,6 +727,24 @@ a.ui-button:active,
 	font-size: 14px;
 }
 
+
+#gallery {display:none}
+
+.newyear h3 {margin-top:50px}
+.nyul {margin:15px 0px 80px 0px; float:left}
+.nyul li {list-style:square; width:33%; float:left; margin-bottom:10px; font-size:20px}
+.socials__link.elb {color:#A99964; font-weight:700}
+
+.socials__link.elb img {
+    float: left;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.advantages__title.main__title { font-size:24px}
+
+.advantages__desc {margin-bottom:45px}
+
 /* Adaptive */
 
 
@@ -744,7 +770,13 @@ a.ui-button:active,
 	}
 
 	.main__title--decor {
-		width: auto;
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 27px;
+	}
+	.about .main__title--decor {
+		display: inherit
 	}
 
 	.main__desc {
@@ -753,8 +785,10 @@ a.ui-button:active,
 	}
 
 	.main__section {
-		padding: 30px 0;
+		padding: 20px 0;
 	}
+	
+	.nyul li {list-style:square; width:100%; float:left; margin-bottom:10px; font-size:20px}
 
 /* Если соц.сетей будет больше одного */
 /*
@@ -765,7 +799,10 @@ a.ui-button:active,
 		bottom: 30px;
 	}
 */
-
+	.socials__link {
+		margin: 0 auto;	
+	}
+	
 	.header__top {
 		padding-top: 0;
 	}
@@ -800,6 +837,7 @@ a.ui-button:active,
 		background-size: 100% 100%;
 		height: calc(91vh - 101.344px);
 		padding: 0;
+		margin-bottom: 0;
 	}
 
 	#main_modal_form .modal-content .hero__form {
@@ -929,15 +967,10 @@ a.ui-button:active,
 
 
 
-#gallery {display:none}
-
-.newyear h3 {margin-top:50px}
-.nyul {margin:15px 0px 80px 0px; float:left}
-.nyul li {list-style:square; width:33%; float:left; margin-bottom:10px; font-size:20px}
-.socials__link.elb {color:#A99964; font-weight:700}
-
-.socials__link.elb img {
-    float: left;
-    width: 30px;
-    margin-right: 20px;
+#hero_message , #form_message {
+    color:  #000;
+    z-index: 555;
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
 }

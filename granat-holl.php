@@ -37,24 +37,7 @@
 							<a href="tel:+79858111111" class="header__phone">+7 985 811-11-11</a>
 							<a href="tel:+79252122222" class="header__phone">+7 925 212-22-22</a>
 						</div>
-						<div class="col-lg-2 d-none d-lg-block">
-							<div class="socials">
-								<div class="row justify-content-center">
-									<!--
-										<a href="#0" target="_blank" class="socials__link">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/vk.svg" alt="Link to Vkontakte" class="socials__icon">
-										</a>
-										
-										<a href="#0" target="_blank" class="socials__link">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/fb.svg" alt="Link to Facebook" class="socials__icon">
-										</a>
-									-->
-									<a href="https://www.instagram.com/granat_hall/" target="_blank" class="socials__link">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst.svg" alt="Link to Instagram" class="socials__icon">
-									</a>
-								</div>
-							</div>
-						</div>
+						<div class="col-lg-2 d-none d-lg-block"></div>
 					</div>
 					<button class="d-block d-lg-none mobile-btn" type="button">
 						<span></span>
@@ -89,8 +72,34 @@
 									<li><a class="header__nav-link" href="#gallery">Галерея</a></li>
 									<li><a class="header__nav-link" href="#feedback">Отзывы</a></li>
 									<li><a class="header__nav-link" href="#contacts">Контакты</a></li>
+									<li><a href="https://www.instagram.com/granat_hall/" target="_blank" class="socials__link">
+									
+										<?php  if (!wp_is_mobile() ): ?>
+											<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-white.svg" alt="Link to Instagram" class="socials__icon">
+											<?php else:?>
+												<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-black.svg" alt="Link to Instagram" class="socials__icon">
+										<?php endif; ?>
+									</a></li>
 								</ul>
 							</nav>
+<!--
+							<div class="socials">
+								<div class="row justify-content-center">
+									
+										<a href="#0" target="_blank" class="socials__link">
+										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/vk.svg" alt="Link to Vkontakte" class="socials__icon">
+										</a>
+										
+										<a href="#0" target="_blank" class="socials__link">
+										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/fb.svg" alt="Link to Facebook" class="socials__icon">
+										</a>
+									
+									<a href="https://www.instagram.com/granat_hall/" target="_blank" class="socials__link">
+										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst.svg" alt="Link to Instagram" class="socials__icon">
+									</a>
+								</div>
+							</div>
+-->
 						</div>
 						
 					</div>
@@ -99,7 +108,7 @@
 			
 		</header>
 		<!-- Main -->
-		<main class="main">
+		<main id="wrapper" class="main">
 			<!-- Hero -->
 			<section class="main__section hero">
 				<?php  if (!wp_is_mobile() ): ?>
@@ -111,7 +120,7 @@
 					<div class="hero__content">
 						
 						<button type="button" class="d-block d-xl-none main__input-submit main__input-submit--modal" data-toggle="modal" data-target="#main_modal_form">Забронировать</button>
-						<form class="hero__form" action="./granat-holl/assets/php/server.php" method="post">
+						<form class="hero__form" >
 							<div class="d-flex flex-row flex-wrap flex-xl-nowrap align-items-center">
 								<div class="col-7 col-xl">
 									<label class="hero__form-label" for="hero__form-calendar">
@@ -126,27 +135,7 @@
 									<label class="hero__form-label" for="hero__form-persons">
 										<span>Кол-во человек</span>
 									</label>
-									<select id="hero__form-persons" class="main__input main__input--persons" name="number">
-										<option>1</option>
-										<option selected="selected">2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-										<option>11</option>
-										<option>12</option>
-										<option>13</option>
-										<option>14</option>
-										<option>15</option>
-										<option>16</option>
-										<option>17</option>
-										<option>18</option>
-										<option>19</option>
-									</select>
+									<input id="hero__form-persons"	class="main__input main__input--hero-form_input"	type="number"	placeholder="">
 								</div>
 								<div class="col-12 col-xl">
 									<img class="hero__form-img_time d-none d-xl-block" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/time.svg" alt="icon">
@@ -259,9 +248,11 @@
 									required>
 								</div>
 								<div class="col text-center">
-									<input id="hero__form-submit" class="main__input-submit" type="submit" value="Забронировать">
+									<button id="hero__form-submit" class="main__input-submit"  value="Забронировать">Забронировать</button>
+								
 								</div>
 							</div>
+								<div id="hero_message"></div>
 						</form>
 						
 					</div>
@@ -272,7 +263,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-md-6">
-							<h2 class="main__title">Гранат Холл - это 2 атмосферных зала</h2>
+							<h2 class="main__title ">Гранат Холл - это 2 атмосферных зала</h2>
 							<p class="main__desc">
 								Гранат Холл – один из наиболее масштабных банкетных комплексов Москвы, идеально подходящий для проведения мероприятий любого формата. Он состоит из двух залов: зал на 300 и зал на 100 человек. <br/><br/>Роскошное оформление в бело-золотых тонах (большой зал) и специальные дизайн (маленький зал) не оставят никого без впечатлений. <br/><br/> Преимущество комплекса – новейшее аудиовизуальное оборудование, благодаря которому вы можете провести здесь не только праздники, но и деловые мероприятия, семинары, пресс-конференции и брифинги.
 							</p>
@@ -292,13 +283,13 @@
 						<div class="col-12 col-md-12 text-center">
 							<h2 class="main__title main__title--decor">Новогодняя ночь 2020 в Гранат Холле</h2>
 							<p class="main__desc">
-								Великолепный банкетный зал, совершенно новая, потрясающая программа, меню для гурманов – всё, что нужно для  Новогодней ночи 2020 года! Атмосфера общего веселья не даст Вам скучать. <br/> Красочно оформленный зал, нарядная елка, программа развлечений, музыка и танцы посетителям ресторана обеспечены.
+								Великолепный банкетный зал, совершенно новая, потрясающая программа, меню для гурманов – всё, что нужно для  Новогодней ночи 2020 года! Атмосфера общего веселья не даст Вам скучать. <br/> Красочно оформленный зал, нарядная елка, программа развлечений, музыка и танцы посетителям Гранат Холла обеспечены.
 							</p>
 							
 							<h3>В Новогодней программе:</h3>
 							<ul class="nyul">
 								<li>Дед Мороз и Снегурочка</li>
-								<li>профессиональный DJ</li>
+								<li>Ведущий и DJ</li>
 								<li>развлекательные викторины</li>
 								<li>приятные подарки </li>
 								<li>необычние розыгрыши</li>
@@ -338,7 +329,7 @@
 							<h2 class="main__title main__title--decor">Забронировать зал</h2>
 							<p class="form__desc">Оставьте контакты в форме ниже. Мы свяжемся с Вами для уточнения деталей</p>
 						</div>
-						<form class="form__form" action="" method="post">
+						<form class="form__form">
 							<div class="row align-items-center justify-content-center">
 								<label for="form__form-name"></label>
 								<input id="form__form-name"
@@ -363,8 +354,9 @@
 								oninvalid="this.setCustomValidity('Поле обязательно для заполнения.')"
 								oninput="setCustomValidity('')"
 								required>
-								<input id="form__form-submit" class="main__input-submit main__input-submit--form" type="submit" value="Забронировать">
+								<button id="form__form-submit" class="main__input-submit main__input-submit--form" >Забронировать</button>
 							</div>
+							<div id="form_message"></div>
 						</form>
 					</div>
 				</section>
@@ -639,7 +631,7 @@
 									<div class="advantages__desc col-12 col-md-10">
 										<h3 class="advantages__title main__title">Собственная парковка</h3>
 										<p class="advantages__text main__desc">
-											Парковка работает в будние дни с 19:00 до 00:00, в выходные и праздничные дни — с 12:00 до 00:00
+											У нас всегда найдется место для Вашего автомобиля!
 										</p>
 									</div>
 								</div>
@@ -756,48 +748,6 @@
 										<p class="feedback__slide-subject">Банкет на юбилей, 50 человек</p>
 										<p class="main__desc">
 											Просто идеальный банкет!!! Кухня- это что то запредельное, все получили гастрономическое удовольствие!  Качественное обслуживание, приветливый коллектив, разнообразная кухня — это лишь часть тех приятных моментов, которые я могу отметить. Спасибо нашему менеджеру  за  организацию ТАКОГО праздника!
-										</p>
-									</div>
-									<div class="col-12 col-md-6">
-										<div class="main__frame">
-											<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/feedback/1.jpg" alt="photo">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="feedback__slide">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<h3 class="feedback__slide-title">Андрей</h3>
-										<p class="feedback__slide-subject">Банкет на юбилей, 50 человек</p>
-										<p class="main__desc">
-											Здесь можно уединиться от людской суеты и насладиться
-											атмосферой настоящего комфорта. Переступая порог зала, вы словно оказываетесь
-											внутри дорогого европейского особняка, на стенах которого картины, а дополняют
-											их флористические украшения, которые очень гармонично сочетаются с интерьером.
-											Зал подойдёт для дня рождения, свадебного банкета, презентации, конференции и
-											частной вечеринки.
-										</p>
-									</div>
-									<div class="col-12 col-md-6">
-										<div class="main__frame">
-											<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/feedback/1.jpg" alt="photo">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="feedback__slide">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<h3 class="feedback__slide-title">Андрей</h3>
-										<p class="feedback__slide-subject">Банкет на юбилей, 50 человек</p>
-										<p class="main__desc">
-											Здесь можно уединиться от людской суеты и насладиться
-											атмосферой настоящего комфорта. Переступая порог зала, вы словно оказываетесь
-											внутри дорогого европейского особняка, на стенах которого картины, а дополняют
-											их флористические украшения, которые очень гармонично сочетаются с интерьером.
-											Зал подойдёт для дня рождения, свадебного банкета, презентации, конференции и
-											частной вечеринки.
 										</p>
 									</div>
 									<div class="col-12 col-md-6">
