@@ -24,11 +24,10 @@
 				</div>
 				
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" alt="Забронировать стол" />
-					<div class="container swiper-item">
-						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
-					</div>
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann1.jpg" alt="Гранат Холл" />
+					<div class="container swiper-item"></div>
 				</div>
+
 				
 				
 				<div class="swiper-slide">
