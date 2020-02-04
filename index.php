@@ -24,11 +24,9 @@
 				</div>
 				
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann1.jpg" alt="Гранат Холл" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/birthday_bann.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item"></div>
 				</div>
-
-				
 				
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide4.jpg" alt="Гранат Холл" />
