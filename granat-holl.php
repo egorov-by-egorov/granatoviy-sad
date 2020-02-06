@@ -788,7 +788,19 @@
 				
 			</main>
 			<!-- Footer -->
-			<footer class="footer"></footer>
+			<footer class="footer">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="developer__promind">
+							<a rel="noreferrer" target="_blank" href="https://promind.studio/">
+								<span>Developed by</span>
+								<img class="developer__promind-img" src="<?php bloginfo('template_url') ?>/granat-hall/assets/images/icons/promind-grey.png" alt="ProMind" title="ProMind">
+								<span>Promind</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
 			<!-- Modal -->
 			<div class="modal fade" id="main_modal_form" tabindex="-1" role="dialog" aria-labelledby="ModalMainForm" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">

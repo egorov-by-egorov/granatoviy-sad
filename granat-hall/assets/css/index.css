@@ -964,13 +964,19 @@ a.ui-button:active,
 		/*margin-left: -14px*/
 	}
 }
-
-
-
 #hero_message , #form_message {
     color:  #000;
     z-index: 555;
     position: relative;
     text-align: center;
     margin-top: 25px;
+}
+.developer__promind {
+	font-size: 10px;
+	font-weight: 300;
+	color: #000;
+}
+.developer__promind-img {
+	width: 14px;
+	vertical-align: middle;
 }
