@@ -20,19 +20,37 @@
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide3.jpg" alt="Меню ресторанов" />
 					<div class="container swiper-item">
 						<a class="main__btn main__btn--book single_a" href="/menu/" style="">Посмотреть меню</a>
-						</div>
+					</div>
 				</div>
-				
+
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/birthday_bann.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item"></div>
 				</div>
-				
+
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide1.jpg" alt="Забронировать стол" />
+					<div class="container swiper-item">
+						<a class="main__btn main__btn--book" href="#0" data-toggle="modal" data-target="#modal_book">Забронировать стол</a>
+					</div>
+				</div>
+
+
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann2.jpg" alt="Гранат Холл" />
+					<div class="container swiper-item"></div>
+				</div>
+
 				<div class="swiper-slide">
 					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/slide4.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item">
 						<a class="main__btn main__btn--book" href="/granat-holl" >Посмотреть</a>
 					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann3_new.jpg" alt="Гранат Холл" />
+					<div class="container swiper-item"></div>
 				</div>
 				
 			</div>

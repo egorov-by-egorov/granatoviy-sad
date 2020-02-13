@@ -39,42 +39,6 @@ Template Name: Контакты
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-12">
-					<ul class="contact__address-list-2">
-						<li class="contact__address">
-							<h3 class="contact__address-title">Ресторан на Поречной</h3>
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>Адрес:</b></p>
-							<span>ул.Поречная д. 5/14, стр. 1</span>
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>График работы:</b></p>
-							<span>Пн-чт: 11:00 - 01:00</span><br>
-							<span>Пт-сб: 11:00 - 02:00</span><br>
-							<span>Вск: 11:00 - 01:00</span>
-
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>Бронь столов:</b></p>
-							<a href="tel:+74993402552">+7(499) 340-25-52</a>
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>Доставка еды:</b></p>
-							<a href="tel:+74993400110">+7(499) 340-01-10</a>
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>Караоке NIGHT-CLUB:</b></p>
-							<a href="tel:+74993472828">+7(499) 347-28-28</a><br>
-							<p class="contact__address-subtitle"><b>График работы:</b></p>
-							<span>Пт-сб: 18:00 - 06:00</span>
-						</li>
-						<li class="contact__address">
-							<p class="contact__address-subtitle"><b>Эл. адрес:</b></p>
-							<a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a>
-						</li>
-					</ul>
-				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<ul class="contact__address-list-2">

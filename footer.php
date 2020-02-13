@@ -4,28 +4,22 @@
 	
     <section class="contact">
         <div class="container-fluid p-0">
-        	<? if (!wp_is_mobile() ): ?>
-			<p class="line-granat"></p>
-        	<? endif; ?>
-            <div class="row align-items-center m-0">
-				<?php // if (!wp_is_mobile() ): ?>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
-                    <?php
-						echo is_page('term-delivery');
-                        if (is_checkout() || is_page('term-delivery')) {
-						?>
-						<? if (!wp_is_mobile() ): ?>
-						<h3 class="contact__title">Зоны доставки ресторанов</h3>
-						<? endif; ?>
-						
-						<div id="delivery_map" class="delivery_map"></div>
-						<?php
-							} else if (is_page( 825 )) {
-						?>
-						<div id="map" class="map"></div>
-						<?php
-						}
-					?>
+	        <? if (!wp_is_mobile() ): ?>
+		        <p class="line-granat"></p>
+	        <? endif; ?>
+	        <div class="row align-items-center m-0">
+		        <?php // if (!wp_is_mobile() ): ?>
+		        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+			        <?php if (is_checkout()) {
+				         if (!wp_is_mobile() ): ?>
+					        <h3 class="contact__title">Зона доставки ресторана</h3>
+				        <? endif; ?>
+
+				        <div id="delivery_map" class="delivery_map"></div>
+				        <?php
+			        } else if (is_page( 825 )) { ?>
+				        <div id="map" class="map"></div>
+				    <?php } ?>
 				</div>
 				<?php // endif; ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
@@ -52,9 +46,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <nav class="footer-nav">
 												<ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
-													<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
 													<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
-													<li class="menu-item"><a href="/karaoke/">Караоке бар</a></li>
 													<li class="menu-item"><a href="/awards/">Награды</a></li>
 													<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
 													<li class="menu-item"><a href="/press/">Пресса о нас</a></li>
@@ -81,82 +73,63 @@
 										alt="icon" class="instagram"></a>
 									</div>
 								</div>
-								
-                                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mt-4 mt-md-0">
-                                    <div class="row justify-content-center justify-content-lg-end pr-0">
-										
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
-                                            <ul class="contact__address-list contact__address-list-1">
-                                                <li class="contact__address">                                                   
-                                                    <span> Гранатовый сад №1 </span>
-                                                    <span> (м. Сокол)</span>
-												</li>
-												<li class="contact__address">
-													<span>Адрес:</span>
-													<span>Чапаевский пер. 10/2</span>
-												</li>
-                                                <li class="contact__address">
-                                                    <a href="tel:+74952555333">Бронь столов:
-                                                        <div> +7 (495) 2-555-333</div>
-													</a>
-                                                    <a href="tel:+74952555551">Доставка:
-                                                        <div> +7 (495) 2-555-55-1</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-										
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
-                                            <ul class="contact__address-list contact__address-list-2">
-                                                <li class="contact__address">                                                   
-                                                    <span> Гранатовый сад №1</span>
-                                                    <span> (м. Марьино)</span>
-												</li>
-												<li class="contact__address">
-													<span>Адрес:</span>
-													<span>Поречная 5/14,стр. 1</span>
-												</li>
-                                                <li class="contact__address">
-                                                    <a href="tel:+74993402552">Бронь столов:
-                                                        <div> +7 (499) 340-25-52</div>
-													</a>
-                                                    <a href="tel:+74993400110">Доставка:
-                                                        <div> +7 (499) 340-01-10</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-										
-										<div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
-                                            <ul class="contact__address-list contact__address-list-2">
-                                                <li class="contact__address">                                                   
-                                                    <span> Гранат Холл</span>
-                                                    <span> (м. Люблино)</span>
-												</li>
-												<li class="contact__address">
-													<span>Адрес:</span>
-													<span>ул. Цимлянская 2а</span>
-												</li>
-                                                <li class="contact__address">
-                                                    <a href="tel:+79252122222">Бронь столов:
-                                                        <div> +7 (925) 212-22-22</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-										
-										
-										<div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
-                                            <ul class="contact__address-list contact__address-list-2">                                                
-                                                <li class="contact__address text-center mtop30">
-                                                    <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
-												</li>
-											</ul>
-										</div>
-										
-									</div>
-								</div>
-							</div>
+
+	                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mt-4 mt-md-0">
+		                            <div class="row justify-content-center justify-content-lg-end pr-0">
+
+			                            <div class="col-sm-auto col-9 pr-lg-0">
+				                            <ul class="contact__address-list contact__address-list-1">
+					                            <li class="contact__address">
+						                            <span> Гранатовый сад №1 </span>
+						                            <span> (м. Сокол)</span>
+					                            </li>
+					                            <li class="contact__address">
+						                            <span>Адрес:</span>
+						                            <span>Чапаевский пер. 10/2</span>
+					                            </li>
+					                            <li class="contact__address">
+						                            <a href="tel:+74952555333">Бронь столов:
+							                            <div> +7 (495) 2-555-333</div>
+						                            </a>
+						                            <a href="tel:+74952555551">Доставка:
+							                            <div> +7 (495) 2-555-55-1</div>
+						                            </a>
+					                            </li>
+				                            </ul>
+			                            </div>
+
+
+			                            <div class="col-sm-auto col-9 pr-lg-0">
+				                            <ul class="contact__address-list contact__address-list-2">
+					                            <li class="contact__address">
+						                            <span> Гранат Холл</span>
+						                            <span> (м. Люблино)</span>
+					                            </li>
+					                            <li class="contact__address">
+						                            <span>Адрес:</span>
+						                            <span>ул. Цимлянская 2а</span>
+					                            </li>
+					                            <li class="contact__address">
+						                            <a href="tel:+79252122222">Бронь столов:
+							                            <div> +7 (925) 212-22-22</div>
+						                            </a>
+					                            </li>
+				                            </ul>
+			                            </div>
+
+
+			                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
+				                            <ul class="contact__address-list contact__address-list-2">
+					                            <li class="contact__address text-center mtop30">
+						                            <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
+					                            </li>
+				                            </ul>
+			                            </div>
+
+		                            </div>
+	                            </div>
+
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -184,37 +157,6 @@
 		</div>
 	</div>
 </footer>
-</div>
-
-<!-- Modals -->
-<div class="modal fade" id="modal_book" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
-aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header justify-content-center">
-				<h2 class="modal-title" id="modal_bookTitle">Забронировать стол</h2>
-				<button type="button" class="close modal_book-btn-close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true"><i class="fas fa-times"></i></span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="modal__choose-box">
-					<p class="line-granat"></p>
-					<h2 class="main__title">Выберите ресторан</h2>
-					<div class="row justify-content-around">
-						<button id="open-maryeno-sokol" class="leclick-reservation book__choose-btn"
-						data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">Сокол
-						</button>
-						<button id="open-maryeno-rest" class="book__choose-btn" type="button">Марьино</button>
-					</div>
-				</div>
-				<div id="box-maryeno-rest">
-					<?php echo do_shortcode('[contact-form-7 id="5" title="Забронировать стол"]') ?>
-					
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="modal fade" id="modal_granat" tabindex="-1" role="dialog" aria-labelledby="modal_bookTitle"
