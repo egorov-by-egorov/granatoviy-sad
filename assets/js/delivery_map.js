@@ -28,16 +28,16 @@ function initDeliveryMap() {
       // Находим полигон, в который входят переданные координаты.
       polygon = deliveryZones.searchContaining(coords).get(0);
     if (polygon) {
-      // $('#shipping_method input').removeAttr('checked');
+//      $('#shipping_method input').removeAttr('checked');
       switch(polygon.properties.get('rest')) {
         case 'Сокол':
           $('#place_order').show();
-          // $('#shipping_method_0_free_shipping-4').attr('checked', 'checked');
+//          $('#shipping_method_0_free_shipping-4').attr('checked', 'checked');
           // console.log($('#shipping_method_0_free_shipping-4'));
           break;
         case 'Марьино':
           $('#place_order').show();
-          // $('#shipping_method_0_flat_rate-2').attr('checked', 'checked');
+//          $('#shipping_method_0_flat_rate-2').attr('checked', 'checked');
           // console.log($('#shipping_method_0_flat_rate-2'));
           break;
       }

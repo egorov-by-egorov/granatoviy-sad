@@ -310,3 +310,16 @@ function clear_checkout_fields($value, $input) {
     }
     return $value;
 }
+
+
+add_filter( 'excerpt_length', function(){
+	return 20;
+} );
+
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+function new_excerpt_more( $more ){
+	global $post;
+	return '<a class="news__readmore-link" href="'. get_permalink($post) . '">Читать дальше...</a>';
+}
+
+

@@ -4,11 +4,11 @@
 	
     <section class="contact">
         <div class="container-fluid p-0">
-	        <? if (!wp_is_mobile() ): ?>
-		        <p class="line-granat"></p>
-	        <? endif; ?>
-	        <div class="row align-items-center m-0">
-		        <?php // if (!wp_is_mobile() ): ?>
+        	<? if (!wp_is_mobile() ): ?>
+			<p class="line-granat"></p>
+        	<? endif; ?>
+            <div class="row align-items-center m-0">
+			<?php // if (!wp_is_mobile() ): ?>
 		        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
 			        <?php if (is_checkout()) {
 				         if (!wp_is_mobile() ): ?>
@@ -46,7 +46,9 @@
                                         <div class="col-lg-6 col-md-6">
                                             <nav class="footer-nav">
 												<ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
+													<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
 													<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
+													<li class="menu-item"><a href="/karaoke/">Караоке бар</a></li>
 													<li class="menu-item"><a href="/awards/">Награды</a></li>
 													<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
 													<li class="menu-item"><a href="/press/">Пресса о нас</a></li>
@@ -73,63 +75,82 @@
 										alt="icon" class="instagram"></a>
 									</div>
 								</div>
-
-	                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mt-4 mt-md-0">
-		                            <div class="row justify-content-center justify-content-lg-end pr-0">
-
-			                            <div class="col-sm-auto col-9 pr-lg-0">
-				                            <ul class="contact__address-list contact__address-list-1">
-					                            <li class="contact__address">
-						                            <span> Гранатовый сад №1 </span>
-						                            <span> (м. Сокол)</span>
-					                            </li>
-					                            <li class="contact__address">
-						                            <span>Адрес:</span>
-						                            <span>Чапаевский пер. 10/2</span>
-					                            </li>
-					                            <li class="contact__address">
-						                            <a href="tel:+74952555333">Бронь столов:
-							                            <div> +7 (495) 2-555-333</div>
-						                            </a>
-						                            <a href="tel:+74952555551">Доставка:
-							                            <div> +7 (495) 2-555-55-1</div>
-						                            </a>
-					                            </li>
-				                            </ul>
-			                            </div>
-
-
-			                            <div class="col-sm-auto col-9 pr-lg-0">
-				                            <ul class="contact__address-list contact__address-list-2">
-					                            <li class="contact__address">
-						                            <span> Гранат Холл</span>
-						                            <span> (м. Люблино)</span>
-					                            </li>
-					                            <li class="contact__address">
-						                            <span>Адрес:</span>
-						                            <span>ул. Цимлянская 2а</span>
-					                            </li>
-					                            <li class="contact__address">
-						                            <a href="tel:+79252122222">Бронь столов:
-							                            <div> +7 (925) 212-22-22</div>
-						                            </a>
-					                            </li>
-				                            </ul>
-			                            </div>
-
-
-			                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
-				                            <ul class="contact__address-list contact__address-list-2">
-					                            <li class="contact__address text-center mtop30">
-						                            <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
-					                            </li>
-				                            </ul>
-			                            </div>
-
-		                            </div>
-	                            </div>
-
-                            </div>
+								
+                                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mt-4 mt-md-0">
+                                    <div class="row justify-content-center justify-content-lg-end pr-0">
+										
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-1">
+                                                <li class="contact__address">                                                   
+                                                    <span> Гранатовый сад №1 </span>
+                                                    <span> (м. Сокол)</span>
+												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>Чапаевский пер. 10/2</span>
+												</li>
+                                                <li class="contact__address">
+                                                    <a href="tel:+74952555333">Бронь столов:
+                                                        <div> +7 (495) 2-555-333</div>
+													</a>
+                                                    <a href="tel:+74952555551">Доставка:
+                                                        <div> +7 (495) 2-555-55-1</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-2">
+                                                <li class="contact__address">                                                   
+                                                    <span> Гранатовый сад №1</span>
+                                                    <span> (м. Марьино)</span>
+												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>Поречная 5/14,стр. 1</span>
+												</li>
+                                                <li class="contact__address">
+                                                    <a href="tel:+74993402552">Бронь столов:
+                                                        <div> +7 (499) 340-25-52</div>
+													</a>
+                                                    <a href="tel:+74993400110">Доставка:
+                                                        <div> +7 (499) 340-01-10</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										
+										<div class="col-lg-4 col-md-4 col-sm-4 col-9 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-2">
+                                                <li class="contact__address">                                                   
+                                                    <span> Гранат Холл</span>
+                                                    <span> (м. Люблино)</span>
+												</li>
+												<li class="contact__address">
+													<span>Адрес:</span>
+													<span>ул. Цимлянская 2а</span>
+												</li>
+                                                <li class="contact__address">
+                                                    <a href="tel:+79252122222">Бронь столов:
+                                                        <div> +7 (925) 212-22-22</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										
+										
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-lg-0">
+                                            <ul class="contact__address-list contact__address-list-2">                                                
+                                                <li class="contact__address text-center mtop30">
+                                                    <a href="mailto:info@granatoviy-sad.ru">Email:  info@granatoviy-sad.ru</a>
+												</li>
+											</ul>
+										</div>
+										
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

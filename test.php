@@ -1,6 +1,6 @@
 <?php 
 	/*
-		Template Name: Главная-страница
+		Template Name: ТЕСТОВАЯ СТРАНИЦА
 	*/
 ?>
 
@@ -24,12 +24,7 @@
 				</div>
 				
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/birthday_bann.jpg" alt="-10% в день рождения" />
-					<div class="container swiper-item"></div>
-				</div>
-				
-				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/dishes_outside.jpg" alt="Блюда на вынос" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann1.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item"></div>
 				</div>
 				
@@ -40,8 +35,9 @@
 					</div>
 				</div>
 				
+				
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/wooman_day.jpg" alt="8 марта" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann2.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item"></div>
 				</div>
 				
@@ -53,7 +49,7 @@
 				</div>
 				
 				<div class="swiper-slide">
-					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann3_new.jpg" alt="Гранат Холл" />
+					<img class="swiper-bg" src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/images/bann3.jpg" alt="Гранат Холл" />
 					<div class="container swiper-item"></div>
 				</div>
 				
@@ -66,9 +62,6 @@
 		<script src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/js/swiper.min.js"></script>
 		<script>
 			var swiper = new Swiper('.swiper-container', {
-				autoplay: {
-					delay: 3000,
-				},
 				spaceBetween: 30,
 				effect: 'fade',
 				pagination: {
@@ -173,9 +166,9 @@
 				</div>
 			</div>
 			
-			<?php  if (wp_is_mobile() ){ ?>
-				<link rel="stylesheet" href="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/css/swiper.min.css">
-			<?php } ?>
+
+	
+			<?php  if (!wp_is_mobile() ): ?>
 			<div class="news">
 				<div class="container">
 					<p class="line-granat"></p>
@@ -199,7 +192,7 @@
 											setup_postdata($post);
 											?>
 
-											<div class="swiper-slide text-center" style="width: 404px; margin-right: 14px;">
+											<div class="swiper-slide" style="width: 404px; margin-right: 14px;">
 												<a href="<?php the_permalink(); ?>">
 
 												<?php if ( has_post_thumbnail()) { ?>
@@ -209,10 +202,8 @@
 												 <?php } ?>
 												 
 													<div class="news-tile text-center">
-													<a href="<?php the_permalink(); ?>">
 														<?php the_title( '<h3 class="news-title">', '</h3>' ); ?>
-														</a>
-														<!--
+<!--
 														<div class="news-date">
 															<time datetime="<?php the_time(Y-m-d) ?>"><?php the_time('d F Y') ?></time>
 														</div>
@@ -229,34 +220,30 @@
 
 
 						</div>
-
+						<div class="swiper-pagination swiper-pagination-white"></div>
+						<div class="swiper-button-next swiper-button-white"></div>
+						<div class="swiper-button-prev swiper-button-white"></div>
 					</div>
 				</div>
-				<?php  if (wp_is_mobile() ){ ?>
-					<script src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/assets/js/swiper.min.js"></script>
-				<?php } ?>
 				<script>
 					var swiper = new Swiper('.swiper-news', {
 						slidesPerView: 3,
 						spaceBetween: 15,
 						slidesPerGroup: 1,
-						breakpoints: {
-							// when window width is >= 320px
-							320: {
-							  slidesPerView: 1,
-							  spaceBetween: 30
-							},
-							// when window width is >= 768px
-							768: {
-								slidesPerView: 3,
-								spaceBetween: 15
-							},
-						}
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true,
+						},
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
 					});
 				</script>
 			</div>
+			<?php endif; ?>
 			
-			
+
 			<div class="container-custom">
 				<h2 class="main__title main__title--about">О ресторане</h2>
 			</div>

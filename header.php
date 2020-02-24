@@ -51,13 +51,15 @@
 									<span><i class="fas fa-map-marker-alt"></i> м. Сокол, Чапаевский пер. 10/2</span>
 									<span><a href="tel:+74952555333"><i class="fa fa-phone" aria-hidden="true"></i>Бронь столов: +7 (495) 2-555-333</a></span>
 									<span><a href="tel:+74952555551"><i class="fa fa-phone" aria-hidden="true"></i>Доставка: +7 (495) 2-555-55-1</a></span>
+									<img src="<?php bloginfo(template_url); ?>/assets/images/granatIcon.svg" alt="логотип">
+									<span><i class="fas fa-map-marker-alt"></i> м. Марьино, ул.Поречная д. 5/14, стр. 1</span>
 								</div>
 								<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 p-0 d-flex align-items-center justify-content-end line">
 									<div class="d-lg-block d-none">
-										<button class="leclick-reservation main__btn main__btn--book"
-										        data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">
-											<i class="far fa-calendar-alt"></i> Забронировать стол
-										</button>
+									<button class="leclick-reservation main__btn main__btn--book"
+						data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">
+						<i class="far fa-calendar-alt"></i> Забронировать стол
+						</button>
 									</div>
 									<button class="sidebar-btn" aria-label="Меню">
 										<span></span>
@@ -84,7 +86,7 @@
 							</div>
 							<div class="col-2 col-sm-2 mobile-booking">
 								<button class="leclick-reservation mobile-book"
-								        data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">
+								data-restaurant-id="12380" type="button" data-dismiss="modal" aria-label="Close">
 									<i class="far fa-calendar-alt"></i>
 								</button>
 							</div>
@@ -109,7 +111,7 @@
                             <aside class="nav-sidebar">
                                 <nav class="nav-sidebar-nav">
                                     <ul id="menu-nav-sidebar__menu-1" class="footer__nav-list">
-										<li class="menu-item"><a href="/restoran-marino/">Ресторан в Марьино</a></li>
+										<li class="menu-item"><a href="/restoran-sokol/">Ресторан на Соколе</a></li>
 										<li class="menu-item"><a href="/bankets/">Банкеты/кейтеринг</a></li>
 										<li class="menu-item"><a href="/press/">Пресса о нас</a></li>										
 										<li class="menu-item"><a href="/awards/">Награды</a></li>
@@ -135,16 +137,16 @@
 													</li>
 												</ul>
                                                 <ul class="col-md-6 col-lg-6">
-	                                                <li class="contact__address">
-		                                                <img src="<?php bloginfo(template_url); ?>/assets/images/contact_icon.svg" alt="icon" class="contact__address-icon">
-		                                                <span>г. Москва, улица Цимлянская 2а</span>
-	                                                </li>
-	                                                <li class="contact__address">
-		                                                <span><a href="tel:+79252122222">+7 925 212-22-22</a></span>
-	                                                </li>
-	                                                <li class="contact__address">
-		                                                <span>info@granatoviy-sad.ru</span>
-	                                                </li>
+													<li class="contact__address">
+                                                        <img src="<?php bloginfo(template_url); ?>/assets/images/contact_icon.svg" alt="icon" class="contact__address-icon">
+                                                        <span>г. Москва, улица Цимлянская 2а</span>
+													</li>
+                                                    <li class="contact__address">
+                                                        <span><a href="tel:+79252122222">+7 925 212-22-22</a></span>
+													</li>
+                                                    <li class="contact__address">
+                                                        <span>info@granatoviy-sad.ru</span>
+													</li>
 												</ul>
 											</div>
 										</div>

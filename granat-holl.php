@@ -24,8 +24,13 @@
 			<div class="header__top">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<div class="col-lg-2 d-none d-lg-block">г. Москва, улица Цимлянская 2а</div>
-						<div class="col-lg-2"></div>
+						<div class="col-lg-3 d-none d-lg-block text-left">
+							<div class="header__location">
+								<img class="location-icon" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/map.svg" alt="location" />
+								<span>г. Москва, улица <br> Цимлянская 2а</span>
+							</div>
+						</div>
+						<div class="col-lg-1"></div>
 						<div class="col-lg-4">
 							<div class="header__logo">
 								<a href="/">
@@ -33,18 +38,53 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-lg-2 d-none d-lg-block">
-							<a href="tel:+79858111111" class="header__phone">+7 985 811-11-11</a>
-							<a href="tel:+79252122222" class="header__phone">+7 925 212-22-22</a>
+						<div class="col-lg-1 d-none d-lg-block"></div>
+						<div class="col-lg-3 d-none d-lg-block">
+							<a href="tel:+79858111111" class="header__phone"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/telephone.svg" alt="telephone" /> +7 985 811-11-11</a>
+							<a href="tel:+79252122222" class="header__phone"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/telephone.svg" alt="telephone" /> +7 925 212-22-22</a>
 						</div>
-						<div class="col-lg-2 d-none d-lg-block"></div>
+						
 					</div>
 					<button class="d-block d-lg-none mobile-btn" type="button">
 						<span></span>
 					</button>
+					<?php  if (wp_is_mobile() ): ?>
 					<nav id="mobile__menu" class="mobile__menu">
-						<ul class="mobile__menu-list"></ul>
+						<ul class="mobile__menu-list">
+							<li><a class="header__nav-link scrollto" href="#wrapper">Главная</a></li>
+							<li><a class="header__nav-link scrollto" href="#about">О нас</a></li>
+							<li><a class="header__nav-link scrollto" href="#hall">Залы</a></li>
+							<li><a class="header__nav-link scrollto" href="#gallery">Галерея</a></li>
+							<li><a class="header__nav-link scrollto" href="#feedback">Отзывы</a></li>
+							<li><a class="header__nav-link scrollto" href="#contacts">Контакты</a></li>
+							<li><a href="https://www.instagram.com/granat_hall/" target="_blank" class="socials__link">
+								<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-mob-gold.svg" alt="Link to Instagram" class="socials__icon">
+							</a></li>
+						</ul>
+						<div class="row justify-content-center">
+						
+							<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/map.svg" alt="icon" class="contacts__logo">
+								<h3 class="contacts__title">Адрес</h3>
+								<div class="contacts__info">Ул. Цимлянская 2а</div>
+							</div>
+							<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/telephone.svg" alt="icon" class="contacts__logo">
+								<h3 class="contacts__title">Бронь столов</h3>
+								<div class="contacts__info">
+									<a href="tel:+79858111111">+7 (985) 811-11-11</a>
+									<a href="tel:+79252122222">+7 (925) 212-22-22</a>
+								</div>
+							</div>
+							<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/email.svg" alt="icon" class="contacts__logo">
+								<h3 class="contacts__title">Эл. адрес</h3>
+								<div class="contacts__info">
+									<a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a>
+								</div>
+							</div>
+							
+						</div>
 					</nav>
+					<?php else:?>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="header__bottom">
@@ -55,33 +95,34 @@
 					<div class="row">
 						
 						<div class="col-lg-4 d-none d-lg-block">
+						<?php  if (!wp_is_mobile() ): ?>
 							<nav class="header__nav">
 								<ul>
-									<li><a class="header__nav-link" href="/">Главная</a></li>
-									<li><a class="header__nav-link" href="#about">О нас</a></li>
-									<li><a class="header__nav-link" href="#hall">Залы</a></li>
+									<li><a class="header__nav-link scrollto" href="#wrapper">Главная</a></li>
+									<li><a class="header__nav-link scrollto" href="#about">О нас</a></li>
+									<li><a class="header__nav-link scrollto" href="#hall">Залы</a></li>
 								</ul>
 							</nav>
+						<?php else:?>
+						<?php endif; ?>
 						</div>
 						
 						<div class="col-lg-4"></div>
 						
 						<div class="col-lg-4 d-none d-lg-block">
+						<?php  if (!wp_is_mobile() ): ?>
 							<nav class="header__nav">
 								<ul>
-									<li><a class="header__nav-link" href="#gallery">Галерея</a></li>
-									<li><a class="header__nav-link" href="#feedback">Отзывы</a></li>
-									<li><a class="header__nav-link" href="#contacts">Контакты</a></li>
+									<li><a class="header__nav-link scrollto" href="#gallery">Галерея</a></li>
+									<li><a class="header__nav-link scrollto" href="#feedback">Отзывы</a></li>
+									<li><a class="header__nav-link scrollto" href="#contacts">Контакты</a></li>
 									<li><a href="https://www.instagram.com/granat_hall/" target="_blank" class="socials__link">
-									
-										<?php  if (!wp_is_mobile() ): ?>
-											<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-white.svg" alt="Link to Instagram" class="socials__icon">
-											<?php else:?>
-												<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-black.svg" alt="Link to Instagram" class="socials__icon">
-										<?php endif; ?>
+										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/inst-white.svg" alt="Link to Instagram" class="socials__icon">
 									</a></li>
 								</ul>
 							</nav>
+							<?php else:?>
+							<?php endif; ?>
 <!--
 							<div class="socials">
 								<div class="row justify-content-center">
@@ -110,19 +151,39 @@
 		<!-- Main -->
 		<main id="wrapper" class="main">
 			<!-- Hero -->
-			<section class="main__section hero">
-				<?php  if (!wp_is_mobile() ): ?>
-				<video autoplay="" class="hero__video-box hero__video d-none d-sm-block" loop="" muted="" playsinline="">
-					<source src="<?php bloginfo(template_url); ?>/granat-hall/assets/video/test1.mp4" type="video/mp4">
-				</video>
-				<?php endif; ?>
+			<section id="hero" class="main__section hero">
+				<!-- Hero_slider -->
+				<div class="hero-slider">
+					<div class="hero-slide">
+						<?php  if (!wp_is_mobile() ) { ?>
+							<video autoplay="" class="hero__video-box hero__video d-none d-sm-block" loop="" muted="" playsinline="">
+								<source src="<?php bloginfo(template_url); ?>/granat-hall/assets/video/test1.mp4" type="video/mp4">
+							</video>
+						<?php } else{ ?>
+							<img class="hero-slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hero/bann1-mob.jpg" alt="Гранат Холл" />
+						<?php } ?>
+					</div>
+					<div class="hero-slide">
+					<?php  if (!wp_is_mobile() ){ ?>
+						<img class="hero-slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hero/bann2.jpg" alt="Гранат Холл" />
+					<?php } else{ ?>
+							<img class="hero-slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hero/bann2-mob.jpg" alt="Гранат Холл" />
+						<?php } ?>
+					</div>
+					<?php  if (wp_is_mobile() ){ ?>
+						<div class="hero-slide">
+							<img class="hero-slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hero/bann3-mob.jpg" alt="Гранат Холл" />
+						</div>
+					<?php } ?>
+				</div>
+			
 				<div class="container">
 					<div class="hero__content">
 						
 						<button type="button" class="d-block d-xl-none main__input-submit main__input-submit--modal" data-toggle="modal" data-target="#main_modal_form">Забронировать</button>
 						<form class="hero__form" >
 							<div class="d-flex flex-row flex-wrap flex-xl-nowrap align-items-center">
-								<div class="col-7 col-xl">
+								<div class="col-6 col-xl">
 									<label class="hero__form-label" for="hero__form-calendar">
 										<span>Дата события</span>
 									</label>
@@ -131,16 +192,16 @@
 										<img class="hero__form-img_calend" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/calend.svg" alt="icon">
 									</div>
 								</div>
-								<div class="col-5 col-xl">
+								<div class="col-6 col-xl">
 									<label class="hero__form-label" for="hero__form-persons">
 										<span>Кол-во человек</span>
 									</label>
-									<input id="hero__form-persons"	class="main__input main__input--hero-form_input"	type="number"	placeholder="">
+									<input id="hero__form-persons"	class="main__input main__input--hero-form_input"	type="number" value="1">
 								</div>
 								<div class="col-12 col-xl">
 									<img class="hero__form-img_time d-none d-xl-block" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/time.svg" alt="icon">
 									<div class="row justify-content-between justify-content-xl-start flex-nowrap p-0 pl-xl-4">
-										<div class="col">
+										<div class="col-6">
 											<label class="hero__form-label" for="hero__form-start">
 												<span>Начало</span>
 											</label>
@@ -177,7 +238,7 @@
 												<option>01:30</option>
 											</select>
 										</div>
-										<div class="col">
+										<div class="col-6">
 											<label class="hero__form-label" for="hero__form-end">
 												<span>Окончание</span>
 											</label>
@@ -263,9 +324,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-md-6">
-							<h2 class="main__title ">Гранат Холл - это 2 атмосферных зала</h2>
+							<h2 class="main__title <?=wp_is_mobile() ? 'main__title--decor' : '' ?>">Гранат Холл - это 2 атмосферных зала</h2>
 							<p class="main__desc">
-								Гранат Холл – один из наиболее масштабных банкетных комплексов Москвы, идеально подходящий для проведения мероприятий любого формата. Он состоит из двух залов: зал на 300 и зал на 100 человек. <br/><br/>Роскошное оформление в бело-золотых тонах (большой зал) и специальные дизайн (маленький зал) не оставят никого без впечатлений. <br/><br/> Преимущество комплекса – новейшее аудиовизуальное оборудование, благодаря которому вы можете провести здесь не только праздники, но и деловые мероприятия, семинары, пресс-конференции и брифинги.
+								Гранат Холл – один из наиболее масштабных банкетных комплексов Москвы, идеально подходящий для проведения мероприятий любого формата. Он состоит из двух залов: зал на 400 и зал на 100 человек. <br/><br/>Роскошное оформление в бело-золотых тонах (большой зал) и специальные дизайн (маленький зал) не оставят никого без впечатлений. <br/><br/> Преимущество комплекса – новейшее аудиовизуальное оборудование, благодаря которому вы можете провести здесь не только праздники, но и деловые мероприятия, семинары, пресс-конференции и брифинги.
 							</p>
 						</div>
 						<div class="col-12 col-md-6">
@@ -276,539 +337,411 @@
 					</div>
 				</div>
 			</section>
-			<!-- New year -->
-			<section id="newyear" class="main__section newyear">
+			<!-- Form -->
+			<section class="main__section form">
 				<div class="container position-relative">
-					<div class="row">
-						<div class="col-12 col-md-12 text-center">
-							<h2 class="main__title main__title--decor">Новогодняя ночь 2020 в Гранат Холле</h2>
-							<p class="main__desc">
-								Великолепный банкетный зал, совершенно новая, потрясающая программа, меню для гурманов – всё, что нужно для  Новогодней ночи 2020 года! Атмосфера общего веселья не даст Вам скучать. <br/> Красочно оформленный зал, нарядная елка, программа развлечений, музыка и танцы посетителям Гранат Холла обеспечены.
-							</p>
-							
-							<h3>В Новогодней программе:</h3>
-							<ul class="nyul">
-								<li>Дед Мороз и Снегурочка</li>
-								<li>Ведущий и DJ</li>
-								<li>развлекательные викторины</li>
-								<li>приятные подарки </li>
-								<li>необычние розыгрыши</li>
-								<li>живая музыка</li>								
-							</ul>
-							
+					<div class="text-center">
+						<h2 class="main__title main__title--decor">Забронировать зал</h2>
+						<p class="form__desc">Оставьте контакты в форме ниже. Мы свяжемся с Вами для уточнения деталей</p>
+					</div>
+					<form class="form__form">
+						<div class="row align-items-center justify-content-center">
+							<label for="form__form-name"></label>
+							<input id="form__form-name"
+							class="main__input main__input--form mr-3"
+							type="text"
+							placeholder="Ваше имя"
+							title="Введите Ваше имя. Поле должно содержать минимум два символа и иметь только буквы."
+							minlength="2"
+							pattern="[A-Za-zА-Яа-яЁё]+"
+							inputmode="text"
+							spellcheck="true"
+							oninvalid="this.setCustomValidity('Введите Ваше имя. Поле должно содержать минимум два символа и иметь только буквы.')"
+							oninput="setCustomValidity('')"
+							required>
+							<label for="form__form-phone"></label>
+							<input id="form__form-phone"
+							class="main__input main__input--form mr-3"
+							type="text"
+							placeholder="+7 ( ) ___-__-__"
+							inputmode="numeric"
+							spellcheck="true"
+							oninvalid="this.setCustomValidity('Поле обязательно для заполнения.')"
+							oninput="setCustomValidity('')"
+							required>
+							<button id="form__form-submit" class="main__input-submit main__input-submit--form" >Забронировать</button>
+						</div>
+						<div id="form_message"></div>
+					</form>
+				</div>
+			</section>
+			<!-- Hall -->
+			<section id="hall" class="main__section hall">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-12 col-md-6">
+							<div class="main__frame">
+								<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hall/1.jpg" alt="Зал на 400 человек">
+							</div>
 						</div>
 						<div class="col-12 col-md-6">
+							<h2 class="main__title">Зал на 400 человек</h2>
 							<p class="main__desc">
-								<h2 class="main__title">Специальный гость - Эльбрус Джанмирзоев</h2>
-								<p class="main__desc">
-									Создать отличное Новогоднее настроение поможет изысканная музыкальная программа. <br/><br/> Атмосферу вечера задает известная звезда Эльбрус Джанмирзоев - один из самых популярных современных поп-исполнителей  . <br/><br/> 
-									<a href="https://www.instagram.com/elbrusofficial/" target="_blank" class="socials__link elb">
-										<img src="https://granatoviy-sad.ru/wp-content/themes/pomegranate-garden-theme/granat-hall/assets/images/icons/inst.svg" alt="Link to Instagram" class="socials__icon"> elbrusofficial 
-									</a> 
-								</p>
-							</div>
-							<div class="col-12 col-md-6">
-								<div class="main__frame">
-									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/about/elbrus.png" style="max-height:272px" alt="Эльбрус Джанмирзоев">
-								</div>
-							</div>
-							<div class="col-12 ">
+								Вас ждет <strong>огромный банкетный зал</strong>, стильный и оригинальный интерьер, лучшее музыкальное оборудование. Наш просторный зал вмещает <strong>до 400 человек</strong>, а это означает, что даже самая грандиозная свадьба или юбилей у нас будут незабываемыми! <br/><br/> Для проведения <strong>свадеб и юбилеев</strong> мы индивидуально составляем концепцию праздника, продумываем размещение столов, подбираем лучшую команду для обслуживания. Чтобы громко и отметить свое мероприятий вы также можете заказать ди-джея или любимых музыкальных исполнителей.
+							</p>
+						</div>
+						<div class="col-12 col-md-6 order-4 order-xl-3">
+							<h2 class="main__title">Зал на 100 человек</h2>
 							<p class="main__desc">
-								Если у вас не осталось сомнений, где отметить Новый год 2020, поспешите забронировать место для себя и своих друзей!   <br/>  Хотите, чтобы эта Новогодняя Ночь стала лучшей? Звоните <strong>+7 985 811-11-11 и +7 925 212-22-22 ! </strong>
-								</p>
-							</div>
-							
-							
+								Визитная карточка банкетного зала на 100 человек – интересный и необычный дизайн. Экстерьер здания и интерьер внутренних помещений производит впечатление настоящей сказки. <br/><br/>
+								По индивидуальному заказу клиента мы украшаем зал в соответствии с тематикой и направленностью праздника, предлагаем яркие и нестандартные решения и креативность. <br/><br/>Заказывая проведения праздника в нашем заведении, вы получаете множество положительных эмоций и качественное обслуживание.
+							</p>
 						</div>
-					</div>
-				</section>
-				<!-- Form -->
-				<section class="main__section form">
-					<div class="container position-relative">
-						<div class="text-center">
-							<h2 class="main__title main__title--decor">Забронировать зал</h2>
-							<p class="form__desc">Оставьте контакты в форме ниже. Мы свяжемся с Вами для уточнения деталей</p>
-						</div>
-						<form class="form__form">
-							<div class="row align-items-center justify-content-center">
-								<label for="form__form-name"></label>
-								<input id="form__form-name"
-								class="main__input main__input--form mr-3"
-								type="text"
-								placeholder="Ваше имя"
-								title="Введите Ваше имя. Поле должно содержать минимум два символа и иметь только буквы."
-								minlength="2"
-								pattern="[A-Za-zА-Яа-яЁё]+"
-								inputmode="text"
-								spellcheck="true"
-								oninvalid="this.setCustomValidity('Введите Ваше имя. Поле должно содержать минимум два символа и иметь только буквы.')"
-								oninput="setCustomValidity('')"
-								required>
-								<label for="form__form-phone"></label>
-								<input id="form__form-phone"
-								class="main__input main__input--form mr-3"
-								type="text"
-								placeholder="+7 ( ) ___-__-__"
-								inputmode="numeric"
-								spellcheck="true"
-								oninvalid="this.setCustomValidity('Поле обязательно для заполнения.')"
-								oninput="setCustomValidity('')"
-								required>
-								<button id="form__form-submit" class="main__input-submit main__input-submit--form" >Забронировать</button>
+						<div class="col-12 col-md-6 order-3 order-xl-4">
+							<div class="main__frame">
+								<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hall/2.jpg" alt="Зал на 100 человек">
 							</div>
-							<div id="form_message"></div>
-						</form>
-					</div>
-				</section>
-				<!-- Hall -->
-				<section id="hall" class="main__section hall">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-12 col-md-6">
-								<div class="main__frame">
-									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hall/1.jpg" alt="Зал на 300 человек">
-								</div>
-							</div>
-							<div class="col-12 col-md-6">
-								<h2 class="main__title">Зал на 300 человек</h2>
-								<p class="main__desc">
-									Вас ждет <strong>огромный банкетный зал</strong>, стильный и оригинальный интерьер, лучшее музыкальное оборудование. Наш просторный зал вмещает <strong>до 300 человек</strong>, а это означает, что даже самая грандиозная свадьба или юбилей у нас будут незабываемыми! <br/><br/> Для проведения <strong>свадеб и юбилеев</strong> мы индивидуально составляем концепцию праздника, продумываем размещение столов, подбираем лучшую команду для обслуживания. Чтобы громко и отметить свое мероприятий вы также можете заказать ди-джея или любимых музыкальных исполнителей.
-								</p>
-							</div>
-							<div class="col-12 col-md-6 order-4 order-xl-3">
-								<h2 class="main__title">Зал на 100 человек</h2>
-								<p class="main__desc">
-									Визитная карточка банкетного зала на 100 человек – интересный и необычный дизайн. Экстерьер здания и интерьер внутренних помещений производит впечатление настоящей сказки. <br/><br/>
-									По индивидуальному заказу клиента мы украшаем зал в соответствии с тематикой и направленностью праздника, предлагаем яркие и нестандартные решения и креативность. <br/><br/>Заказывая проведения праздника в нашем заведении, вы получаете множество положительных эмоций и качественное обслуживание.
-								</p>
-							</div>
-							<div class="col-12 col-md-6 order-3 order-xl-4">
-								<div class="main__frame">
-									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/hall/2.jpg" alt="Зал на 100 человек">
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Gallery -->
-				<section id="gallery" class="main__section gallery">
-					<div class="container">
-						<div class="text-center">
-							<h2 class="main__title main__title--decor">Фотогалерея</h2>
-						</div>
-						<!-- Tabs control -->
-						<ul class="nav gallery__tab-list" id="pills-tab" role="tablist">
-							<li class="nav-item">
-								<h2 class="nav-link main__title active" id="tab-slider-1" data-toggle="pill" href="#tab-1" role="tab" aria-controls="tab-slide-1" aria-selected="true">Зал на 300 человек</h2>
-							</li>
-							<li class="nav-item">
-								<h2 class="nav-link main__title" id="tab-slider-2" data-toggle="pill" href="#tab-2" role="tab" aria-controls="tab-slide-2" aria-selected="false">Зал на 100 человек</h2>
-							</li>
-							<!--				<li class="nav-item">-->
-							<!--					<h2 class="nav-link main__title" id="tab-slider-3" data-toggle="pill" href="#tab-3" role="tab" aria-controls="tab-slide-3" aria-selected="false">Видео</h2>-->
-							<!--				</li>-->
-						</ul>
-						<!-- Tabs content -->
-						<div class="tab-content" id="pills-tabContent">
-							<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-slider-1">
-								<!-- Gallery slider hall-300 -->
-								<div class="gallery-slider__window text-center">
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/1.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/2.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/3.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/4.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/5.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/6.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/7.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/8.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/9.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/10.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/11.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/12.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/13.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/14.jpg" alt="Фото зала на 300 человек">
-									</div>
-								</div>
-								<div class="gallery-slider__nav">
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/1.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/2.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/3.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/4.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/5.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/6.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/7.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/8.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/9.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/10.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/11.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/12.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/13.jpg" alt="Фото зала на 300 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/14.jpg" alt="Фото зала на 300 человек">
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-slider-2">
-								<!-- Gallery slider hall-100 -->
-								<div class="gallery-slider__window text-center">
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/1.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/2.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/3.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/4.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/5.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/6.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/7.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__top">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/8.jpg" alt="Фото зала на 100 человек">
-									</div>
-								</div>
-								<div class="gallery-slider__nav">
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/1.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/2.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/3.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/4.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/5.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/6.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/7.jpg" alt="Фото зала на 100 человек">
-									</div>
-									<div class="gallery-slider__thumbnail">
-										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/8.jpg" alt="Фото зала на 100 человек">
-									</div>
-								</div>
-							</div>
-							<!--				<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-slider-3">-->
-							<!--					-- Gallery slider -- -->
-							<!--					<div class="gallery-slider__window text-center">-->
-							<!--						<div class="gallery-slider__top">видео 1</div>-->
-							<!--						<div class="gallery-slider__top">видео 2</div>-->
-							<!--						<div class="gallery-slider__top">видео 3</div>-->
-							<!--						<div class="gallery-slider__top">видео 4</div>-->
-							<!--					</div>-->
-							<!--					<div class="gallery-slider__nav">-->
-							<!--						<div class="gallery-slider__thumbnail">видео 1</div>-->
-							<!--						<div class="gallery-slider__thumbnail">видео 2</div>-->
-							<!--						<div class="gallery-slider__thumbnail">видео 3</div>-->
-							<!--						<div class="gallery-slider__thumbnail">видео 4</div>-->
-							<!--					</div>-->
-							<!--				</div>-->
-						</div>
-					</div>
-				</section>
-				<!-- Advantages -->
-				<section class="main__section advantages">
-					<div class="container">
-						<div class="text-center">
-							<h2 class="main__title main__title--decor">Что вы полуаете</h2>
-						</div>
-						<div class="row justify-content-between">
-							<div class="col-12 col-md-5">
-								<div class="row">
-									<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/table.svg" alt="icon"></div>
-									<div class="advantages__desc col-12 col-md-10">
-										<h3 class="advantages__title main__title">Два зала</h3>
-										<p class="advantages__text main__desc">
-											Возможность выбрать зал для разного количества гостей. Вы будете чувствовать себя комфортно.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 col-md-5">
-								<div class="row">
-									<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/serving-dish.svg" alt="icon"></div>
-									<div class="advantages__desc col-12 col-md-10">
-										<h3 class="advantages__title main__title">Изысканное меню</h3>
-										<p class="advantages__text main__desc">
-											Блюда русской и европейской кухни
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 col-md-5">
-								<div class="row">
-									<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/rings.svg" alt="icon"></div>
-									<div class="advantages__desc col-12 col-md-10">
-										<h3 class="advantages__title main__title">Организация мероприятий</h3>
-										<p class="advantages__text main__desc">
-											Возможность выбрать зал для разного количества гостей. Вы будете чувствовать себя комфортно.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 col-md-5">
-								<div class="row">
-									<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/wedding-arch.svg" alt="icon"></div>
-									<div class="advantages__desc col-12 col-md-10">
-										<h3 class="advantages__title main__title">Оформление зала</h3>
-										<p class="advantages__text main__desc">
-											Мы можем оформить зал согласно Вашим пожеланиям и тематике мероприятия.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 col-md-5">
-								<div class="row">
-									<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/parking.svg" alt="icon"></div>
-									<div class="advantages__desc col-12 col-md-10">
-										<h3 class="advantages__title main__title">Собственная парковка</h3>
-										<p class="advantages__text main__desc">
-											У нас всегда найдется место для Вашего автомобиля!
-										</p>
-									</div>
-								</div>
-							</div>
-							<!--
-								<div class="col-12 col-md-5">
-								<div class="row">
-								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/percent.svg" alt="icon"></div>
-								<div class="advantages__desc col-12 col-md-10">
-								<h3 class="advantages__title main__title">Бонусная программа</h3>
-								<p class="advantages__text main__desc">
-								В нашем ресторане действует программа лояльности, полные условия можно узнать тут.
-								</p>
-								</div>
-								</div>
-								</div>
-							-->
-						</div>
-					</div>
-				</section>
-				<!-- Banket -->
-				<!-- <section class="main__section banket">
-					<div class="container">
-					<div class="banket__slider">
-					<div class="banket__slide">
-					<div class="text-center mb3">
-					<h2 class="main__title main__title--decor">Банкет на свадьбу</h2>
-					</div>
-					<div class="row">
-					<div class="col-12 col-md-6">
-					<h3 class="banket__slide-subtitle">Примерное меню:</h3>
-					<ol class="banket__slide-desc">
-					<li>Гусь запеченный</li>
-					<li>Салат из жареного сулугуни</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					</ol>
-					</div>
-					<div class="col-12 col-md-6 text-right">
-					<img class="banket__slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/banket/1.jpg" alt="photo">
-					</div>
-					</div>
-					<div class="text-center">
-					<a class="banket__slide-link main__input-submit" href="#0">Смотреть полное меню</a>
-					</div>
-					</div>
-					<div class="banket__slide">
-					<div class="text-center mb3">
-					<h2 class="main__title main__title--decor">Банкет на свадьбу</h2>
-					</div>
-					<div class="row">
-					<div class="col-12 col-md-6">
-					<h3 class="banket__slide-subtitle">Примерное меню:</h3>
-					<ol class="main__desc">
-					<li>Гусь запеченный</li>
-					<li>Салат из жареного сулугуни</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					</ol>
-					</div>
-					<div class="col-12 col-md-6 text-right">
-					<img class="banket__slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/banket/1.jpg" alt="photo">
-					</div>
-					</div>
-					.text-center
-					<a class="banket__slide-link main__input-submit" href="#0">Смотреть полное меню</a>
-					
-					</div>
-					<div class="banket__slide">
-					<div class="text-center mb3">
-					<h2 class="main__title main__title--decor">Банкет на свадьбу</h2>
-					</div>
-					<div class="row">
-					<div class="col-12 col-md-6">
-					<h3 class="banket__slide-subtitle">Примерное меню:</h3>
-					<ol class="banket__slide-desc">
-					<li>Гусь запеченный</li>
-					<li>Салат из жареного сулугуни</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					<li>Салат Греческий с Бакинскими овощами</li>
-					</ol>
-					</div>
-					<div class="col-12 col-md-6 text-right">
-					<img class="banket__slide-img" src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/banket/1.jpg" alt="photo">
-					</div>
-					</div>
-					.text-center
-					<a class="banket__slide-link main__input-submit main__input-submit--form" href="#0">Смотреть полное меню</a>
-					
-					</div>
-					</div>
-					</div>
-				</section> -->
-				<!-- Feedback -->
-				<section id="feedback" class="main__section feedback">
-					<div class="container">
-						<div class="text-center">
-							<h2 class="main__title main__title--decor">Отзывы</h2>
-						</div>
-						<div class="feedback__slider">
-							<div class="feedback__slide">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<h3 class="feedback__slide-title">Андрей</h3>
-										<p class="feedback__slide-subject">Банкет на юбилей, 50 человек</p>
-										<p class="main__desc">
-											Просто идеальный банкет!!! Кухня- это что то запредельное, все получили гастрономическое удовольствие!  Качественное обслуживание, приветливый коллектив, разнообразная кухня — это лишь часть тех приятных моментов, которые я могу отметить. Спасибо нашему менеджеру  за  организацию ТАКОГО праздника!
-										</p>
-									</div>
-									<div class="col-12 col-md-6">
-										<div class="main__frame">
-											<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/feedback/1.jpg" alt="photo">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Contacts -->
-				<section id="contacts" class="main__section contacts">
-					<div class="row justify-content-center">
-						
-						<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/map.svg" alt="icon" class="contacts__logo">
-							<h3 class="contacts__title">Адрес</h3>
-							<div class="contacts__info">Ул. Цимлянская 2а</div>
-						</div>
-						<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/telephone.svg" alt="icon" class="contacts__logo">
-							<h3 class="contacts__title">Бронь столов</h3>
-							<div class="contacts__info">
-								<a href="tel:+79858111111">+7 (985) 811-11-11</a>
-								<a href="tel:+79252122222">+7 (925) 212-22-22</a>
-							</div>
-						</div>
-						<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/email.svg" alt="icon" class="contacts__logo">
-							<h3 class="contacts__title">Эл. адрес</h3>
-							<div class="contacts__info">
-								<a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- <Map> -->
-				<section class="map"></section>
-				
-			</main>
-			<!-- Footer -->
-			<footer class="footer">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="developer__promind">
-							<a rel="noreferrer" target="_blank" href="https://promind.studio/">
-								<span>Developed by</span>
-								<img class="developer__promind-img" src="<?php bloginfo('template_url') ?>/granat-hall/assets/images/icons/promind-grey.png" alt="ProMind" title="ProMind">
-								<span>Promind</span>
-							</a>
 						</div>
 					</div>
 				</div>
-			</footer>
-			<!-- Modal -->
-			<div class="modal fade" id="main_modal_form" tabindex="-1" role="dialog" aria-labelledby="ModalMainForm" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<span class="main_modal_form--exit" aria-hidden="true">&times;</span>
+			</section>
+			<!-- Gallery -->
+			<section id="gallery" class="main__section gallery">
+				<div class="container">
+					<div class="text-center">
+						<h2 class="main__title main__title--decor">Фотогалерея</h2>
+					</div>
+					<!-- Tabs control -->
+					<ul class="nav gallery__tab-list" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<h2 class="nav-link main__title active" id="tab-slider-1" data-toggle="pill" href="#tab-1" role="tab" aria-controls="tab-slide-1" aria-selected="true">Зал на 400 человек</h2>
+						</li>
+						<li class="nav-item">
+							<h2 class="nav-link main__title" id="tab-slider-2" data-toggle="pill" href="#tab-2" role="tab" aria-controls="tab-slide-2" aria-selected="false">Зал на 100 человек</h2>
+						</li>
+						<!--				<li class="nav-item">-->
+						<!--					<h2 class="nav-link main__title" id="tab-slider-3" data-toggle="pill" href="#tab-3" role="tab" aria-controls="tab-slide-3" aria-selected="false">Видео</h2>-->
+						<!--				</li>-->
+					</ul>
+					<!-- Tabs content -->
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-slider-1">
+							<!-- Gallery slider hall-300 -->
+							<div class="gallery-slider__window text-center">
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/1.jpg" alt="Фото зала на 400 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/2.jpg" alt="Фото зала на 400 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/3.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/4.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/5.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/6.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/7.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/8.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/9.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/10.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/11.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/12.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/13.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/14.jpg" alt="Фото зала на 300 человек">
+								</div>
+							</div>
+							<div class="gallery-slider__nav">
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/1.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/2.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/3.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/4.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/5.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/6.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/7.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/8.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/9.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/10.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/11.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/12.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/13.jpg" alt="Фото зала на 300 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_300/14.jpg" alt="Фото зала на 300 человек">
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-slider-2">
+							<!-- Gallery slider hall-100 -->
+							<div class="gallery-slider__window text-center">
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/1.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/2.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/3.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/4.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/5.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/6.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/7.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__top">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/8.jpg" alt="Фото зала на 100 человек">
+								</div>
+							</div>
+							<div class="gallery-slider__nav">
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/1.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/2.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/3.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/4.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/5.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/6.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/7.jpg" alt="Фото зала на 100 человек">
+								</div>
+								<div class="gallery-slider__thumbnail">
+									<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/gallery/hall_100/8.jpg" alt="Фото зала на 100 человек">
+								</div>
+							</div>
+						</div>
+						<!--				<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-slider-3">-->
+						<!--					-- Gallery slider -- -->
+						<!--					<div class="gallery-slider__window text-center">-->
+						<!--						<div class="gallery-slider__top">видео 1</div>-->
+						<!--						<div class="gallery-slider__top">видео 2</div>-->
+						<!--						<div class="gallery-slider__top">видео 3</div>-->
+						<!--						<div class="gallery-slider__top">видео 4</div>-->
+						<!--					</div>-->
+						<!--					<div class="gallery-slider__nav">-->
+						<!--						<div class="gallery-slider__thumbnail">видео 1</div>-->
+						<!--						<div class="gallery-slider__thumbnail">видео 2</div>-->
+						<!--						<div class="gallery-slider__thumbnail">видео 3</div>-->
+						<!--						<div class="gallery-slider__thumbnail">видео 4</div>-->
+						<!--					</div>-->
+						<!--				</div>-->
+					</div>
+				</div>
+			</section>
+			<!-- Advantages -->
+			<section class="main__section advantages">
+				<div class="container">
+					<div class="text-center">
+						<h2 class="main__title main__title--decor">Что вы полуаете</h2>
+					</div>
+					<div class="row justify-content-between justify-content-lg-around">
+						<div class="col-12 col-md-5">
+							<div class="row">
+								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/table.svg" alt="icon"></div>
+								<div class="advantages__desc col-12 col-md-10">
+									<h3 class="advantages__title main__title">Два зала</h3>
+									<p class="advantages__text main__desc">
+										Возможность выбрать зал для разного количества гостей. Вы будете чувствовать себя комфортно.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-5">
+							<div class="row">
+								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/serving-dish.svg" alt="icon"></div>
+								<div class="advantages__desc col-12 col-md-10">
+									<h3 class="advantages__title main__title">Изысканное меню</h3>
+									<p class="advantages__text main__desc">
+										Блюда русской и европейской кухни
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-5">
+							<div class="row">
+								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/rings.svg" alt="icon"></div>
+								<div class="advantages__desc col-12 col-md-10">
+									<h3 class="advantages__title main__title">Организация мероприятий</h3>
+									<p class="advantages__text main__desc">
+										Возможность выбрать зал для разного количества гостей. Вы будете чувствовать себя комфортно.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-5">
+							<div class="row">
+								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/wedding-arch.svg" alt="icon"></div>
+								<div class="advantages__desc col-12 col-md-10">
+									<h3 class="advantages__title main__title">Оформление зала</h3>
+									<p class="advantages__text main__desc">
+										Мы можем оформить зал согласно Вашим пожеланиям и тематике мероприятия.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-5">
+							<div class="row">
+								<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/parking.svg" alt="icon"></div>
+								<div class="advantages__desc col-12 col-md-10">
+									<h3 class="advantages__title main__title">Собственная парковка</h3>
+									<p class="advantages__text main__desc">
+										У нас всегда найдется место для Вашего автомобиля!
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--
+							<div class="col-12 col-md-5">
+							<div class="row">
+							<div class="advantages__pic col-12 col-md-2"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/percent.svg" alt="icon"></div>
+							<div class="advantages__desc col-12 col-md-10">
+							<h3 class="advantages__title main__title">Бонусная программа</h3>
+							<p class="advantages__text main__desc">
+							В нашем ресторане действует программа лояльности, полные условия можно узнать тут.
+							</p>
+							</div>
+							</div>
+							</div>
+						-->
+					</div>
+				</div>
+			</section>
+			<!-- Feedback -->
+			<section id="feedback" class="main__section feedback">
+				<div class="container">
+					<div class="text-center">
+						<h2 class="main__title main__title--decor">Отзывы</h2>
+					</div>
+					<div class="feedback__slider">
+						<div class="feedback__slide">
+							<div class="row">
+								<div class="col-12 col-md-6">
+									<h3 class="feedback__slide-title">Андрей</h3>
+									<p class="feedback__slide-subject">Банкет на юбилей, 50 человек</p>
+									<p class="main__desc">
+										Просто идеальный банкет!!! Кухня- это что то запредельное, все получили гастрономическое удовольствие!  Качественное обслуживание, приветливый коллектив, разнообразная кухня — это лишь часть тех приятных моментов, которые я могу отметить. Спасибо нашему менеджеру  за  организацию ТАКОГО праздника!
+									</p>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="main__frame">
+										<img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/feedback/1.jpg" alt="photo">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contacts -->
+			<section id="contacts" class="main__section contacts">
+				<div class="row justify-content-center">
+
+					<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/map.svg" alt="icon" class="contacts__logo">
+						<h3 class="contacts__title">Адрес</h3>
+						<div class="contacts__info">Ул. Цимлянская 2а</div>
+					</div>
+					<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/telephone.svg" alt="icon" class="contacts__logo">
+						<h3 class="contacts__title">Бронь столов</h3>
+						<div class="contacts__info">
+							<a href="tel:+79858111111">+7 (985) 811-11-11</a>
+							<a href="tel:+79252122222">+7 (925) 212-22-22</a>
+						</div>
+					</div>
+					<div class="contacts__item"><img src="<?php bloginfo(template_url); ?>/granat-hall/assets/images/icons/email.svg" alt="icon" class="contacts__logo">
+						<h3 class="contacts__title">Эл. адрес</h3>
+						<div class="contacts__info">
+							<a href="mailto:info@granatoviy-sad.ru">info@granatoviy-sad.ru</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <Map> -->
+			<section class="map"></section>
+
+		</main>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="developer__promind">
+						<a rel="noreferrer" target="_blank" href="https://promind.studio/">
+							<span>Developed by</span>
+							<img class="developer__promind-img" src="<?php bloginfo('template_url') ?>/granat-hall/assets/images/icons/promind-grey.png" alt="ProMind" title="ProMind">
+							<span>Promind</span>
+						</a>
 					</div>
 				</div>
 			</div>
-			<a href="#wrapper" class="scrollto scroll__top"></a>
-		</body>
-	</html>	
+		</footer>
+		<!-- Modal -->
+		<div class="modal fade" id="main_modal_form" tabindex="-1" role="dialog" aria-labelledby="ModalMainForm" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<span class="main_modal_form--exit" data-dismiss="modal" aria-hidden="true">&times;</span>
+				</div>
+			</div>
+		</div>
+		<a href="#wrapper" class="scrollto scroll__top"></a>
+	</body>
+</html>	
